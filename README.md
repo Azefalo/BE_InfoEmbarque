@@ -1,20 +1,18 @@
-# BE InfoEmbarque
+# BE InfoEmbarque - Project voilier
 
-## Project voilier
-
-### Used pins:
+## Used pins:
 
 **PA0**:    EncoderA
 
 **PA1**:    EncoderB
 
-PA2:    NOT USED
+PA2:    Do Not Connect
 
-PA3:    NOT USED
+PA3:    Do Not Connect
 
 **PA4**:    Encoder index (Z)
 
-PA5:    NOT USED
+PA5:    Do Not Connect
 
 **PA6**:    Sens du Plateau
 
@@ -24,11 +22,11 @@ PA5:    NOT USED
 
 **PA10**:   TX UART
 
-PA13:    NOT USED
+PA13:    Do Not Connect
 
-PA14:    NOT USED
+PA14:    Do Not Connect
 
-PA15:    NOT USED
+PA15:    Do Not Connect
 
 **PB0**:    PWM ServoMotor
 
