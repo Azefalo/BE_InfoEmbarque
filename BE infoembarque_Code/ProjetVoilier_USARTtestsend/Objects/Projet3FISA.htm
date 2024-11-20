@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\Projet3FISA.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Projet3FISA.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Wed Nov 20 11:05:04 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Wed Nov 20 11:13:14 2024
 <BR><P>
 <H3>Maximum Stack Usage =         36 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; UART1_SendAlphabet &rArr; UART1_SendChar
+__rt_entry_main &rArr; main &rArr; UART1_Init &rArr; MyGPIO_Init
 <P>
 <H3>
 Functions with no stack information
@@ -203,7 +203,7 @@ Global Symbols
 
 <P><STRONG><a name="[3f]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; UART1_SendAlphabet &rArr; UART1_SendChar
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; UART1_Init &rArr; MyGPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -492,7 +492,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[4a]"></a>UART1_Init</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, principal.o(.text.UART1_Init))
+<P><STRONG><a name="[4a]"></a>UART1_Init</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, principal.o(.text.UART1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = UART1_Init &rArr; MyGPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
@@ -500,24 +500,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4c]"></a>UART1_SendAlphabet</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, principal.o(.text.UART1_SendAlphabet))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = UART1_SendAlphabet &rArr; UART1_SendChar
-</UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_SendChar
-</UL>
-<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[4c]"></a>UART1_Receive</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, principal.o(.text.UART1_Receive))
+<BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[4d]"></a>UART1_SendChar</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, principal.o(.text.UART1_SendChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART1_SendChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_SendAlphabet
+<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, principal.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = main &rArr; UART1_SendAlphabet &rArr; UART1_SendChar
+<P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, principal.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = main &rArr; UART1_Init &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_SendAlphabet
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_SendChar
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_Receive
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main

@@ -1,5 +1,6 @@
 --cpu Cortex-M3
 ".\objects\principal.o"
+".\objects\usarttest.o"
 ".\objects\gpio.o"
 ".\objects\timer.o"
 ".\objects\adc.o"

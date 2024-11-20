@@ -74,6 +74,7 @@ void UART1_Init(void) {
     GPIOA->CRH &= ~GPIO_CRH_MODE10;
     GPIOA->CRH |= GPIO_CRH_CNF10_0; // PA10 en entrée flottante
     // Configuration de PA9 comme TX (output push-pull)
+	  MyGPIO_Struct_TypeDef tx;
     tx.GPIO = GPIOA;
     tx.GPIO_Pin = 9;
     tx.GPIO_Conf = AltOut_Ppull;
@@ -86,6 +87,7 @@ void UART1_Init(void) {
     USART1->BRR |= 75; // Baud rate à 9600 bps
 
     USART1->CR1 |= USART_CR1_RE; // Activer la réception
+		USART1->CR1 |= USART_CR1_TE; //Activer la transmission
 }
 
 // Fonction pour recevoir un octet via UART1
@@ -93,14 +95,17 @@ char UART1_Receive(void) {
     while (!(USART1->SR & USART_SR_RXNE)); // Attendre que les données soient prêtes
     return (char)(USART1->DR); // Lire la donnée reçue
 }
-
+void UART1_SendChar(char c) {
+    while (!(USART1->SR & USART_SR_TXE)); // Attendre que le buffer de transmission soit vide
+    USART1->DR = c;                       // Envoyer le caractère
+}
 int main(void) {
     UART1_Init();
     char receivedData;
 
     while (1) {
         receivedData = UART1_Receive(); // Recevoir un caractère
-        // Vous pouvez ajouter du code pour afficher ou traiter les données reçues
+        UART1_SendChar(receivedData);
     }
 
     return 0;
