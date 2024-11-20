@@ -453,6 +453,16 @@
               <FileType>1</FileType>
               <FilePath>..\Driver\MyEncoder.c</FilePath>
             </File>
+            <File>
+              <FileName>MyPLATEAU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MyPLATEAU.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyPLATEAU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MyPLATEAU.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -978,6 +988,16 @@
               <FileName>MyEncoder.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\MyEncoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyPLATEAU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MyPLATEAU.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyPLATEAU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MyPLATEAU.h</FilePath>
             </File>
           </Files>
         </Group>

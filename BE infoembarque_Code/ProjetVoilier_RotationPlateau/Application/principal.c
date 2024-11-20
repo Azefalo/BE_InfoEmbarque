@@ -1,5 +1,4 @@
-#include "MyGPIO.h"
-#include "MyTimer.h"
+#include "MYPLATEAU.h"
 #include "stm32f10x.h"
 
 
@@ -7,5 +6,9 @@
 
 
 int main(void) {
-
+	
+	 while(1){
+		 
+	 }
+ 
 }

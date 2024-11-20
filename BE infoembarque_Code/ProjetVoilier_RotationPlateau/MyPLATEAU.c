@@ -1,10 +1,7 @@
-#include "stm32f10x.h"
+
 #include "MyTimer.h"
 #include "MyGPIO.h"
-//#include "Rotation_plateau.h"
-
-#define TIMER_FREQUENCE 72000000   // Fréquence d'horloge du timer en Hz
-#define PWM_FREQUENCE 20000        // Fréquence PWM souhaitée en Hz
+#include "MYPLATEAU.h"
 
 void initPlateau(void) {
 	
@@ -33,6 +30,7 @@ void initPlateau(void) {
 		MyTimer_SetDutyCycle(TIM.Timer ,3 ,20);
     MyTimer_Base_Start(TIM4);
 }
+
 // Fonction pour orienter le plateau avec un sens et un duty cycle
 void orientationPlateau(int sens, float dutycycle) {
     if (sens == 1) {
