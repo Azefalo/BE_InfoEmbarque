@@ -73,11 +73,6 @@ void UART1_Init(void) {
     // Configurer PA10 (RX) en entrée flottante (récepteur)
     GPIOA->CRH &= ~GPIO_CRH_MODE10;
     GPIOA->CRH |= GPIO_CRH_CNF10_0; // PA10 en entrée flottante
-    // Configuration de PA9 comme TX (output push-pull)
-    tx.GPIO = GPIOA;
-    tx.GPIO_Pin = 9;
-    tx.GPIO_Conf = AltOut_Ppull;
-    MyGPIO_Init(&tx);
 
     USART1->CR1 |= USART_CR1_UE; // Activer l'USART
     USART1->CR1 &= ~USART_CR1_M; // 8 bits de données
@@ -100,7 +95,6 @@ int main(void) {
 
     while (1) {
         receivedData = UART1_Receive(); // Recevoir un caractère
-        // Vous pouvez ajouter du code pour afficher ou traiter les données reçues
     }
 
     return 0;

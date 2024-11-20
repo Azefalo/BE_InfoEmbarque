@@ -390,6 +390,11 @@
               <FileType>1</FileType>
               <FilePath>.\Application\principal.c</FilePath>
             </File>
+            <File>
+              <FileName>USARTtest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USARTtest.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -841,6 +846,11 @@
               <FileName>principal.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Application\principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>USARTtest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USARTtest.c</FilePath>
             </File>
           </Files>
         </Group>
