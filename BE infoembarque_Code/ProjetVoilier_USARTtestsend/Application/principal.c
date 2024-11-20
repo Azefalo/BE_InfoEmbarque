@@ -69,10 +69,12 @@
 
 int main(void) {
     UART1_Init();
+	  
     char receivedData;
 
     while (1) {
         receivedData = UART1_Receive(); // Recevoir un caractère
+			  
     }
 
     return 0;
