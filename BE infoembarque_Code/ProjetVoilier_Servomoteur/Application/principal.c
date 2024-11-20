@@ -54,13 +54,13 @@ int main(void) {
 				}
 				
 				if (alpha >=0 & alpha<=45){
-					Teta=0;
+					Teta=180;
 				}
 				if (alpha >=45 & alpha<=180){
-					Teta=90*alpha/(180-45) -90*45/(180-45);
+					Teta=240-180*alpha/135;
 				}
 		
-				MyTimer_SetDutyCycle(tim_SV.Timer ,3 ,(Teta/24)+5);
+				MyTimer_SetDutyCycle(tim_SV.Timer ,3 ,(Teta/36)+5);
 			
     }
 }
