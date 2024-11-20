@@ -10,6 +10,8 @@
 
 **PA4**:    Encoder index (Z)
 
+**PA7**:    Battery level
+
     
 **PA9**:    RX UART
 
