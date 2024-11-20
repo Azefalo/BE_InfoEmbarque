@@ -4,6 +4,7 @@ Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
 
 Section Cross References
 
+    principal.o(.text.UART1_Init) refers to mygpio.o(.text.MyGPIO_Init) for MyGPIO_Init
     principal.o(.ARM.exidx.text.UART1_Init) refers to principal.o(.text.UART1_Init) for [Anonymous Symbol]
     principal.o(.ARM.exidx.text.UART1_SendChar) refers to principal.o(.text.UART1_SendChar) for [Anonymous Symbol]
     principal.o(.text.UART1_SendAlphabet) refers to principal.o(.text.UART1_SendChar) for UART1_SendChar
@@ -215,7 +216,6 @@ Removing Unused input sections from the image.
     Removing adc.o(.text.ADC), (168 bytes).
     Removing adc.o(.ARM.exidx.text.ADC), (8 bytes).
     Removing mygpio.o(.text), (0 bytes).
-    Removing mygpio.o(.text.MyGPIO_Init), (284 bytes).
     Removing mygpio.o(.ARM.exidx.text.MyGPIO_Init), (8 bytes).
     Removing mygpio.o(.text.MyGPIO_Read), (42 bytes).
     Removing mygpio.o(.ARM.exidx.text.MyGPIO_Read), (8 bytes).
@@ -269,7 +269,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
     Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
 
-71 unused section(s) (total 3088 bytes) removed from the image.
+70 unused section(s) (total 2804 bytes) removed from the image.
 
 ==============================================================================
 
@@ -396,19 +396,20 @@ Image Symbol Table
     .text                                    0x08000244   Section        0  sys_exit.o(.text)
     .text                                    0x08000250   Section        2  use_no_semi.o(.text)
     .text                                    0x08000252   Section        0  indicate_semi.o(.text)
-    SetSysClock                              0x08000255   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
-    [Anonymous Symbol]                       0x08000254   Section        0  system_stm32f10x.o(.text.SetSysClock)
-    SetSysClockTo72                          0x0800025d   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
-    [Anonymous Symbol]                       0x0800025c   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
-    [Anonymous Symbol]                       0x08000380   Section        0  system_stm32f10x.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x080003e8   Section        0  mytimer.o(.text.TIM1_UP_IRQHandler)
-    [Anonymous Symbol]                       0x08000418   Section        0  mytimer.o(.text.TIM2_IRQHandler)
-    [Anonymous Symbol]                       0x08000448   Section        0  mytimer.o(.text.TIM3_IRQHandler)
-    [Anonymous Symbol]                       0x08000478   Section        0  mytimer.o(.text.TIM4_IRQHandler)
-    [Anonymous Symbol]                       0x080004a8   Section        0  principal.o(.text.UART1_Init)
-    [Anonymous Symbol]                       0x08000520   Section        0  principal.o(.text.UART1_SendAlphabet)
-    [Anonymous Symbol]                       0x08000574   Section        0  principal.o(.text.UART1_SendChar)
-    [Anonymous Symbol]                       0x080005a4   Section        0  principal.o(.text.main)
+    [Anonymous Symbol]                       0x08000254   Section        0  mygpio.o(.text.MyGPIO_Init)
+    SetSysClock                              0x08000371   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x08000370   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x08000379   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000378   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x0800049c   Section        0  system_stm32f10x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08000504   Section        0  mytimer.o(.text.TIM1_UP_IRQHandler)
+    [Anonymous Symbol]                       0x08000534   Section        0  mytimer.o(.text.TIM2_IRQHandler)
+    [Anonymous Symbol]                       0x08000564   Section        0  mytimer.o(.text.TIM3_IRQHandler)
+    [Anonymous Symbol]                       0x08000594   Section        0  mytimer.o(.text.TIM4_IRQHandler)
+    [Anonymous Symbol]                       0x080005c4   Section        0  principal.o(.text.UART1_Init)
+    [Anonymous Symbol]                       0x08000640   Section        0  principal.o(.text.UART1_SendAlphabet)
+    [Anonymous Symbol]                       0x08000694   Section        0  principal.o(.text.UART1_SendChar)
+    [Anonymous Symbol]                       0x080006c4   Section        0  principal.o(.text.main)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Timer_Callback                           0x20000060   Data           4  mytimer.o(.bss.Timer_Callback)
     [Anonymous Symbol]                       0x20000060   Section        0  mytimer.o(.bss.Timer_Callback)
@@ -567,17 +568,18 @@ Image Symbol Table
     __I$use$semihosting                      0x08000251   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x08000251   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x08000253   Thumb Code     0  indicate_semi.o(.text)
-    SystemInit                               0x08000381   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
-    TIM1_UP_IRQHandler                       0x080003e9   Thumb Code    48  mytimer.o(.text.TIM1_UP_IRQHandler)
-    TIM2_IRQHandler                          0x08000419   Thumb Code    46  mytimer.o(.text.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x08000449   Thumb Code    48  mytimer.o(.text.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x08000479   Thumb Code    48  mytimer.o(.text.TIM4_IRQHandler)
-    UART1_Init                               0x080004a9   Thumb Code   120  principal.o(.text.UART1_Init)
-    UART1_SendAlphabet                       0x08000521   Thumb Code    82  principal.o(.text.UART1_SendAlphabet)
-    UART1_SendChar                           0x08000575   Thumb Code    46  principal.o(.text.UART1_SendChar)
-    main                                     0x080005a5   Thumb Code    24  principal.o(.text.main)
-    Region$$Table$$Base                      0x080005bc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080005cc   Number         0  anon$$obj.o(Region$$Table)
+    MyGPIO_Init                              0x08000255   Thumb Code   284  mygpio.o(.text.MyGPIO_Init)
+    SystemInit                               0x0800049d   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    TIM1_UP_IRQHandler                       0x08000505   Thumb Code    48  mytimer.o(.text.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x08000535   Thumb Code    46  mytimer.o(.text.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08000565   Thumb Code    48  mytimer.o(.text.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08000595   Thumb Code    48  mytimer.o(.text.TIM4_IRQHandler)
+    UART1_Init                               0x080005c5   Thumb Code   122  principal.o(.text.UART1_Init)
+    UART1_SendAlphabet                       0x08000641   Thumb Code    82  principal.o(.text.UART1_SendAlphabet)
+    UART1_SendChar                           0x08000695   Thumb Code    46  principal.o(.text.UART1_SendChar)
+    main                                     0x080006c5   Thumb Code    24  principal.o(.text.main)
+    Region$$Table$$Base                      0x080006dc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080006ec   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
 
@@ -589,9 +591,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000199
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000005cc, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000006ec, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000005cc, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000006ec, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -654,37 +656,39 @@ Memory Map of the image
     0x08000250   0x08000250   0x00000002   Code   RO          255    .text               c_w.l(use_no_semi.o)
     0x08000252   0x08000252   0x00000000   Code   RO          257    .text               c_w.l(indicate_semi.o)
     0x08000252   0x08000252   0x00000002   PAD
-    0x08000254   0x08000254   0x00000008   Code   RO          131    .text.SetSysClock   system_stm32f10x.o
-    0x0800025c   0x0800025c   0x00000122   Code   RO          135    .text.SetSysClockTo72  system_stm32f10x.o
-    0x0800037e   0x0800037e   0x00000002   PAD
-    0x08000380   0x08000380   0x00000066   Code   RO          129    .text.SystemInit    system_stm32f10x.o
-    0x080003e6   0x080003e6   0x00000002   PAD
-    0x080003e8   0x080003e8   0x00000030   Code   RO           64    .text.TIM1_UP_IRQHandler  mytimer.o
-    0x08000418   0x08000418   0x0000002e   Code   RO           66    .text.TIM2_IRQHandler  mytimer.o
-    0x08000446   0x08000446   0x00000002   PAD
-    0x08000448   0x08000448   0x00000030   Code   RO           68    .text.TIM3_IRQHandler  mytimer.o
-    0x08000478   0x08000478   0x00000030   Code   RO           70    .text.TIM4_IRQHandler  mytimer.o
-    0x080004a8   0x080004a8   0x00000078   Code   RO            2    .text.UART1_Init    principal.o
-    0x08000520   0x08000520   0x00000052   Code   RO            6    .text.UART1_SendAlphabet  principal.o
-    0x08000572   0x08000572   0x00000002   PAD
-    0x08000574   0x08000574   0x0000002e   Code   RO            4    .text.UART1_SendChar  principal.o
-    0x080005a2   0x080005a2   0x00000002   PAD
-    0x080005a4   0x080005a4   0x00000018   Code   RO            8    .text.main          principal.o
-    0x080005bc   0x080005bc   0x00000010   Data   RO          313    Region$$Table       anon$$obj.o
+    0x08000254   0x08000254   0x0000011c   Code   RO           45    .text.MyGPIO_Init   mygpio.o
+    0x08000370   0x08000370   0x00000008   Code   RO          131    .text.SetSysClock   system_stm32f10x.o
+    0x08000378   0x08000378   0x00000122   Code   RO          135    .text.SetSysClockTo72  system_stm32f10x.o
+    0x0800049a   0x0800049a   0x00000002   PAD
+    0x0800049c   0x0800049c   0x00000066   Code   RO          129    .text.SystemInit    system_stm32f10x.o
+    0x08000502   0x08000502   0x00000002   PAD
+    0x08000504   0x08000504   0x00000030   Code   RO           64    .text.TIM1_UP_IRQHandler  mytimer.o
+    0x08000534   0x08000534   0x0000002e   Code   RO           66    .text.TIM2_IRQHandler  mytimer.o
+    0x08000562   0x08000562   0x00000002   PAD
+    0x08000564   0x08000564   0x00000030   Code   RO           68    .text.TIM3_IRQHandler  mytimer.o
+    0x08000594   0x08000594   0x00000030   Code   RO           70    .text.TIM4_IRQHandler  mytimer.o
+    0x080005c4   0x080005c4   0x0000007a   Code   RO            2    .text.UART1_Init    principal.o
+    0x0800063e   0x0800063e   0x00000002   PAD
+    0x08000640   0x08000640   0x00000052   Code   RO            6    .text.UART1_SendAlphabet  principal.o
+    0x08000692   0x08000692   0x00000002   PAD
+    0x08000694   0x08000694   0x0000002e   Code   RO            4    .text.UART1_SendChar  principal.o
+    0x080006c2   0x080006c2   0x00000002   PAD
+    0x080006c4   0x080006c4   0x00000018   Code   RO            8    .text.main          principal.o
+    0x080006dc   0x080006dc   0x00000010   Data   RO          313    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080005cc, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080006ec, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080005cc, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080006ec, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000        -       0x00000060   Zero   RW          178    .bss                c_w.l(libspace.o)
     0x20000060        -       0x00000004   Zero   RW           84    .bss.Timer_Callback  mytimer.o
-    0x20000064   0x080005cc   0x00000004   PAD
+    0x20000064   0x080006ec   0x00000004   PAD
     0x20000068        -       0x00000200   Zero   RW          120    HEAP                startup_stm32f10x_md.o
     0x20000268        -       0x00000400   Zero   RW          119    STACK               startup_stm32f10x_md.o
 
@@ -696,15 +700,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
+       284          0          0          0          0       2085   mygpio.o
        190          0          0          0          4       6290   mytimer.o
-       272          0          0          0          0       2014   principal.o
+       274          0          0          0          0       2177   principal.o
         64         26        236          0       1536        888   startup_stm32f10x_md.o
        400          0          0          0          0       3043   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-       936         26        252          0       1544      12235   Object Totals
+      1224         26        252          0       1544      14483   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-        10          0          0          0          4          0   (incl. Padding)
+        12          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -750,15 +755,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1232         42        252          0       1640      12671   Grand Totals
-      1232         42        252          0       1640      12671   ELF Image Totals
-      1232         42        252          0          0          0   ROM Totals
+      1520         42        252          0       1640      14899   Grand Totals
+      1520         42        252          0       1640      14899   ELF Image Totals
+      1520         42        252          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1484 (   1.45kB)
+    Total RO  Size (Code + RO Data)                 1772 (   1.73kB)
     Total RW  Size (RW Data + ZI Data)              1640 (   1.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       1484 (   1.45kB)
+    Total ROM Size (Code + RO Data + RW Data)       1772 (   1.73kB)
 
 ==============================================================================
 
