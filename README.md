@@ -30,14 +30,19 @@ _PA15:    Do Not Connect_
 
 **PB0**:    PWM ServoMotor
 
-
 **PB1**:    Roulis
 
 **PB2**:    Roulis
 
+_PA3:    Do Not Connect_
+
+_PA4:    Do Not Connect_
+
 **PB5**:    Roulis
 
 **PB6**:    Roulis
+
+**PB7**:
 
 **PB8**:    Plateau
 
