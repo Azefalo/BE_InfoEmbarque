@@ -453,6 +453,11 @@
               <FileType>1</FileType>
               <FilePath>..\Driver\MyEncoder.c</FilePath>
             </File>
+            <File>
+              <FileName>MyUSART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MyUSART.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -978,6 +983,11 @@
               <FileName>MyEncoder.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\MyEncoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyUSART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MyUSART.c</FilePath>
             </File>
           </Files>
         </Group>
