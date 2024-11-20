@@ -6,13 +6,13 @@
 
 **PA1**:    EncoderB
 
-PA2:    Do Not Connect
+_PA2:    Do Not Connect_
 
-PA3:    Do Not Connect
+_PA3:    Do Not Connect_
 
 **PA4**:    Encoder index (Z)
 
-PA5:    Do Not Connect
+_PA5:    Do Not Connect_
 
 **PA6**:    Sens du Plateau
 
@@ -22,11 +22,11 @@ PA5:    Do Not Connect
 
 **PA10**:   TX UART
 
-PA13:    Do Not Connect
+_PA13:    Do Not Connect_
 
-PA14:    Do Not Connect
+_PA14:    Do Not Connect_
 
-PA15:    Do Not Connect
+_PA15:    Do Not Connect_
 
 **PB0**:    PWM ServoMotor
 
