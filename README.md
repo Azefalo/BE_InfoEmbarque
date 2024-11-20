@@ -39,6 +39,8 @@ _PA15:    Do Not Connect_
 
 **PB6**:    Roulis
 
+**PB8**:    Plateau
+
 
 
 
