@@ -49,9 +49,9 @@ void updateBoatDirectionAndSpeed(uint8_t receivedData) {
 		if (vitesse >= 2 && vitesse <= 100) {
         MyGPIO_Set(GPIOA,6);                             // Avancer
 		    MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
+        vitesse = (uint8_t)(vitesse);    // Vitesse proportionnelle à la donnée reçue
     } else if (vitesse <= -2 && vitesse >= -100) {
         MyGPIO_Reset(GPIOA,6);                            // Reculer
-			  vitesse=-vitesse;
 		    MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
     } else {                        // Arrêt
         vitesse = 0;
