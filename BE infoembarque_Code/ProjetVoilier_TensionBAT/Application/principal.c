@@ -66,7 +66,7 @@ int main(void) {
 	
     while (1) {
 //			batterylevel=(ADC1->DR & ~((0x0F) << 12))*100*3.6/(4095);
-			  batterylevel ((ADC1->DR - 353) * 100.0) / (474 - 353);
+			  batterylevel= ((ADC1->DR - 353) * 100.0) / (474 - 353);
         // Envoyer les données toutes les 100 ms
         UART1_SendData(direction, batterylevel, roll_angle);
         for (volatile int i = 0; i < 5000000; i++);  // Temporisation d'environ 100 ms
