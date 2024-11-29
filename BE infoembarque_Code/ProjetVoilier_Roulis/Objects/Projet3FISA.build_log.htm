@@ -3,73 +3,848 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.40.0.0
-Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: USER USER, INSA Toulouse, LIC=----
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Marc Sanchez, INSA, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.40.0.3
-Toolchain Path:  C:\Program Files\Keil_5.4\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.22
-Assembler:       Armasm.exe V6.22
-Linker/Locator:  ArmLink.exe V6.22
-Library Manager: ArmAr.exe V6.22
-Hex Converter:   FromElf.exe V6.22
-CPU DLL:         SARMCM3.DLL V5.40.0.3
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
 Dialog DLL:      DARMSTM.DLL V1.69.1.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TARMSTM.DLL V1.67.1.0
  
 <h2>Project:</h2>
-U:\4AE\Microcontroleur\TPnew (2)\TPnew\TPnew\TP\ProjetTimer\ProjetVide.uvprojx
-Project File Date:  10/09/2024
+C:\Users\tutro\Desktop\Be_Info_git\BE_InfoEmbarque\BE infoembarque_Code\ProjetVoilier_Roulis\ProjetVide.uvprojx
+Project File Date:  11/29/2024
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.22', folder: 'C:\Program Files\Keil_5.4\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Reel'
-compiling GPIO.c...
-compiling MyGPIO.c...
-compiling TIMER.c...
-compiling MyADC.c...
+ADC.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+ADC.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+ADC.c(3): warning: In file included from...
+../Driver\MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver\MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+ADC.c(4): warning: In file included from...
+../Driver\MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver\MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver\MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+ADC.c(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        RCC->APB2ENR|=RCC_APB2ENR_ADC1EN; //d<E9>finir une horloge pour l'adc1
+                                               ^
+ADC.c(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        ADC1->SQR1&=~(0xF<<20); // mettre L <E0> 0 pour ne faire qu'une seule conversion
+                                              ^
+ADC.c(2): warning: In file included from...
+../Driver\MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+ADC.c(41): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                         res=(ADC1->DR & ~((0x0F) << 12))*100/(4095);
+                                       ~ ^~~~~~~~~~~~~~~
+ADC.c(47): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+ADC.c(29): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+          MyTimer_Struct_TypeDef tim;
+                                 ^
+ADC.c(6): warning: no previous prototype for function 'ADC' [-Wmissing-prototypes]
+int ADC(void)
+    ^
+ADC.c(6): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int ADC(void)
+^
+static 
+28 warnings generated.
 compiling ADC.c...
-compiling MyTimer.c...
+Application/principal.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+Application/principal.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+Application/principal.c(3): warning: In file included from...
+../Driver\MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver\MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+Application/principal.c(4): warning: In file included from...
+../Driver\MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver\MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver\MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+Application/principal.c(40): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          //MyTimer_Struct_TypeDef tim_SV;//On d<E9>finit notre timer sur le TIM3
+                                                ^
+Application/principal.c(60): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                x=(Message[0]<<8)+Message[1];
+                 ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+Application/principal.c(61): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                y=(Message[2]<<8)+Message[3];
+                 ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+Application/principal.c(62): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                z=(Message[4]<<8)+Message[5];
+                 ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+Application/principal.c(65): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+Application/principal.c(11): warning: variable 'x' set but not used [-Wunused-but-set-variable]
+                uint16_t x;
+                         ^
+Application/principal.c(13): warning: variable 'z' set but not used [-Wunused-but-set-variable]
+                uint16_t z;
+                         ^
+Application/principal.c(12): warning: variable 'y' set but not used [-Wunused-but-set-variable]
+                uint16_t y;
+                         ^
+29 warnings generated.
 compiling principal.c...
+../Driver/MyTimer.c(1): warning: In file included from...
+../Driver/MyTimer.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyTimer.c(1): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/MyTimer.c(2): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyTimer.c(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(33): warning: no previous prototype for function 'TIM1_UP_IRQHandler' [-Wmissing-prototypes]
+void TIM1_UP_IRQHandler(void) { //programme d'interruption pour le timer2
+     ^
+../Driver/MyTimer.c(33): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM1_UP_IRQHandler(void) { //programme d'interruption pour le timer2
+^
+static 
+../Driver/MyTimer.c(61): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(49): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void) { //programme d'interruption pour le timer2
+     ^
+../Driver/MyTimer.c(49): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void) { //programme d'interruption pour le timer2
+^
+static 
+../Driver/MyTimer.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(65): warning: no previous prototype for function 'TIM3_IRQHandler' [-Wmissing-prototypes]
+void TIM3_IRQHandler(void) { //programme d'interruption pour le timer3
+     ^
+../Driver/MyTimer.c(65): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM3_IRQHandler(void) { //programme d'interruption pour le timer3
+^
+static 
+../Driver/MyTimer.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(80): warning: no previous prototype for function 'TIM4_IRQHandler' [-Wmissing-prototypes]
+void TIM4_IRQHandler(void) { //programme d'interruption pour le timer4
+     ^
+../Driver/MyTimer.c(80): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM4_IRQHandler(void) { //programme d'interruption pour le timer4
+^
+static 
+../Driver/MyTimer.c(184): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= (0x6 << 4);  // R<E9>gler le mode PWM 1 (0x6)
+                                                         ^
+../Driver/MyTimer.c(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= TIM_CCMR1_OC1PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= (0x6 << 12);  // R<E9>gler le mode PWM 1 (0x6)
+                                                          ^
+../Driver/MyTimer.c(191): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= TIM_CCMR1_OC2PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(197): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= (0x6 << 4);  // R<E9>gler le mode PWM 1 (0x6)
+                                                         ^
+../Driver/MyTimer.c(198): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= TIM_CCMR2_OC3PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(203): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= (0x6 << 12);  // R<E9>gler le mode PWM 1 (0x6)
+                                                          ^
+../Driver/MyTimer.c(204): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= TIM_CCMR2_OC4PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(213): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR1=pulse;
+                           ~^~~~~
+../Driver/MyTimer.c(216): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR2=pulse;
+                           ~^~~~~
+../Driver/MyTimer.c(219): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR3=pulse;
+                           ~^~~~~
+../Driver/MyTimer.c(222): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR4=pulse;
+                           ~^~~~~
+38 warnings generated.
+compiling MyTimer.c...
+../Driver/MyGPIO.c(1): warning: In file included from...
+../Driver/MyGPIO.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyGPIO.c(1): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyGPIO.c(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIOStructPtr->GPIO_Pin < 8) { // Broche de 0 <E0> 7 (config dans CRL)
+                                                      ^
+../Driver/MyGPIO.c(16): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRL &= ~(0xF << (GPIOStructPtr->GPIO_Pin * 4));  // Effacer la configuration actuelle
+                                 ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(17): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRL |= (GPIOStructPtr->GPIO_Conf << (GPIOStructPtr->GPIO_Pin * 4));  // Configurer
+                                 ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                                GPIOStructPtr->GPIO->CRL |= (0x08 << (GPIOStructPtr->GPIO_Pin * 4));
+                                                                         ~~  ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    } else {  // Broche de 8 <E0> 15 (config dans CRH)
+                             ^
+../Driver/MyGPIO.c(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRH &= ~(0xF << ((GPIOStructPtr->GPIO_Pin - 8) * 4));  // Effacer la configuration actuelle
+                                 ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRH |= (GPIOStructPtr->GPIO_Conf << ((GPIOStructPtr->GPIO_Pin - 8) * 4));  // Configurer
+                                 ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Lecture de l'<E9>tat d'une broche GPIO
+                ^
+../Driver/MyGPIO.c(1): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../Driver/MyGPIO.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIO->IDR & (1 << GPIO_Pin)) { // V<E9>rifier si la broche est <E0> l'<E9>tat haut
+                                           ^
+../Driver/MyGPIO.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIO->IDR & (1 << GPIO_Pin)) { // V<E9>rifier si la broche est <E0> l'<E9>tat haut
+                                                                       ^
+../Driver/MyGPIO.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIO->IDR & (1 << GPIO_Pin)) { // V<E9>rifier si la broche est <E0> l'<E9>tat haut
+                                                                              ^
+../Driver/MyGPIO.c(41): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Activer une broche GPIO (mettre <E0> 1)
+                                   ^
+../Driver/MyGPIO.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BSRR = (1 << GPIO_Pin);  // R<E9>gistre BSRR pour mettre <E0> 1
+                                       ^
+../Driver/MyGPIO.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BSRR = (1 << GPIO_Pin);  // R<E9>gistre BSRR pour mettre <E0> 1
+                                                                   ^
+../Driver/MyGPIO.c(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>sactiver une broche GPIO (mettre <E0> 0)
+    ^
+../Driver/MyGPIO.c(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>sactiver une broche GPIO (mettre <E0> 0)
+                                         ^
+../Driver/MyGPIO.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BRR = (1 << GPIO_Pin);  // R<E9>gistre BRR pour mettre <E0> 0
+                                      ^
+../Driver/MyGPIO.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BRR = (1 << GPIO_Pin);  // R<E9>gistre BRR pour mettre <E0> 0
+                                                                 ^
+../Driver/MyGPIO.c(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Inverser l'<E9>tat d'une broche GPIO
+              ^
+../Driver/MyGPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->ODR ^= (1 << GPIO_Pin);  // XOR sur le r<E9>gistre ODR pour inverser l'<E9>tat
+                                                  ^
+../Driver/MyGPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->ODR ^= (1 << GPIO_Pin);  // XOR sur le r<E9>gistre ODR pour inverser l'<E9>tat
+                                                                                 ^
+../Driver/MyGPIO.c(54): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+37 warnings generated.
+compiling MyGPIO.c...
 assembling startup_stm32f10x_md.s...
+TIMER.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+TIMER.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+TIMER.c(3): warning: In file included from...
+../Driver\MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver\MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+TIMER.c(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Boucle vide pour cr<E9>er un d<E9>lai
+                              ^
+TIMER.c(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Boucle vide pour cr<E9>er un d<E9>lai
+                                         ^
+TIMER.c(17): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+  void delay(volatile uint32_t delay_time) {
+       ^
+TIMER.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  void delay(volatile uint32_t delay_time) {
+  ^
+  static 
+TIMER.c(29): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    TIM2->PSC = 35999;  // Pr<E9>scaler
+                               ^
+TIMER.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    // D<E9>marrage du Timer
+          ^
+TIMER.c(2): warning: In file included from...
+../Driver\MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+TIMER.c(64): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    //Configuration de l<92>interruption sur le coeur
+                          ^
+TIMER.c(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    NVIC->IPR[28] |= (7 << 4);// interruption mis en priorit<E9> 7
+                                                              ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                          ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                                              ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                                                               ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                                                                      ^
+TIMER.c(96): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+TIMER.c(55): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+          MyTimer_Struct_TypeDef tim;
+                                 ^
+TIMER.c(22): warning: no previous prototype for function 'Timer' [-Wmissing-prototypes]
+int Timer(void)
+    ^
+TIMER.c(22): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int Timer(void)
+^
+static 
+33 warnings generated.
+compiling TIMER.c...
+../Driver/MyADC.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyADC.c(2): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyADC.c(3): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/MyADC.c(4): warning: In file included from...
+../Driver/MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver/MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver/MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+../Driver/MyADC.c(7): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          RCC->APB2ENR|=RCC_APB2ENR_ADC1EN; //d<E9>finir une horloge pour l'adc1
+                                               ^
+../Driver/MyADC.c(10): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          ADC1->SQR1&=~(0xF<<20); // mettre L <E0> 0 pour ne faire qu'une seule conversion
+                                              ^
+../Driver/MyADC.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          ADC1->SQR1&=~(0xF<<20); // mettre L <E0> 0 pour ne faire qu'une seule conversion
+                    ~~^~~~~~~~~~
+../Driver/MyADC.c(11): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          ADC1->SQR3|=canal; //choix du canal 8 pour la conversion 
+                    ~~^~~~~
+../Driver/MyADC.c(16): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single(){
+                  ^
+                   void
+../Driver/MyADC.c(19): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ADC1->SR &= ~ADC_SR_EOC; // validation de la conversion
+             ~~ ^~~~~~~~~~~
+../Driver/MyADC.c(20): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+    ~~~~~~ ~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Driver/MyADC.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+                    ~ ^~~~~~~~~~~~~~~
+../Driver/MyADC.c(16): warning: no previous prototype for function 'convert_single' [-Wmissing-prototypes]
+int convert_single(){
+    ^
+../Driver/MyADC.h(4): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int convert_single();
+    ^
+                   void
+../Driver/MyADC.c(23): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont(){
+                ^
+                 void
+../Driver/MyADC.c(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ADC1->SR &= ~ADC_SR_EOC; // validation de la conversion
+             ~~ ^~~~~~~~~~~
+../Driver/MyADC.c(28): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+    ~~~~~~ ~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Driver/MyADC.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+                    ~ ^~~~~~~~~~~~~~~
+../Driver/MyADC.c(29): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+../Driver/MyADC.c(23): warning: no previous prototype for function 'convert_cont' [-Wmissing-prototypes]
+int convert_cont(){
+    ^
+../Driver/MyADC.h(5): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int convert_cont();
+    ^
+                 void
+36 warnings generated.
+compiling MyADC.c...
+GPIO.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+GPIO.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+GPIO.c(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        // Lire l'<E9>tat du bouton poussoir (PC13)
+                    ^
+GPIO.c(27): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        if ((GPIOC->IDR & (1 << 12)))  // Si bouton est press<E9> (PC13 est 0)
+                                                               ^
+GPIO.c(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//            GPIOA->BRR = (1 << 6);      // <C9>teindre la LED (PA5)
+                                             ^
+GPIO.c(2): warning: In file included from...
+../Driver\MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+GPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Lire l'<E9>tat du bouton poussoir et allumer/<E9>teindre la LED en cons<E9>quence
+                  ^
+GPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Lire l'<E9>tat du bouton poussoir et allumer/<E9>teindre la LED en cons<E9>quence
+                                                        ^
+GPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Lire l'<E9>tat du bouton poussoir et allumer/<E9>teindre la LED en cons<E9>quence
+                                                                                  ^
+GPIO.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+            MyGPIO_Reset(led.GPIO, led.GPIO_Pin);  // <C9>teindre la LED
+                                                      ^
+GPIO.c(60): warning: no newline at end of file [-Wnewline-eof]
+                }    
+                     ^
+GPIO.c(4): warning: no previous prototype for function 'GPIO' [-Wmissing-prototypes]
+int GPIO(void)
+    ^
+GPIO.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int GPIO(void)
+^
+static 
+24 warnings generated.
+compiling GPIO.c...
+RTE/Device/STM32F103RB/system_stm32f10x.c(65): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+4 warnings generated.
 compiling system_stm32f10x.c...
 linking...
-Program Size: Code=2208 RO-data=252 RW-data=0 ZI-data=1640  
-".\Objects\Projet3FISA.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=1832 RO-data=268 RW-data=4 ZI-data=1640  
+".\Objects\Projet3FISA.axf" - 0 Error(s), 229 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
-                ARM::CMSIS@6.1.0
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 6.1.0
+   * Component: CORE Version: 5.6.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
-                Keil::STM32F1xx_DFP@2.4.1
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
                 STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
    * Component: Startup Version: 1.0.0
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/Device/STM32F103RB
   ./RTE/_Reel
-  C:/ProgramData/keil/ARM/Pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include
-  C:/ProgramData/keil/ARM/Pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE@6.1.0
+   * Component: ARM::CMSIS:CORE:5.6.0
 
-   * Component: Keil::Device:Startup@1.0.0
-      Source file:   Device/Source/system_stm32f10x.c
+   * Component: Keil::Device:Startup:1.0.0
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
-      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/system_stm32f10x.c
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
-Build Time Elapsed:  00:00:02
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
