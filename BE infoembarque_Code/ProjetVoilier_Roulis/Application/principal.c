@@ -45,9 +45,14 @@ int main(void)
 		
 		//MyTimer_PWM(tim_SV.Timer,3);//On met
 		//MyTimer_Base_Start(TIM3);
-		MySPI_Set_NSS();
-		MySPI_Clear_NSS();
 		MySPI_Init(SPI2);
+		MySPI_Clear_NSS();
+		MySPI_Send(0x2D);
+		MySPI_Send(0x08);
+		MySPI_Send(0x2C);
+		MySPI_Send(0x0A);
+		MySPI_Send(0x31);
+		MySPI_Send(0x03);
 		MySPI_Set_NSS();
 
 	while(1){
