@@ -49,8 +49,12 @@ int main(void)
 		MySPI_Clear_NSS();
 		MySPI_Send(0x2D);
 		MySPI_Send(0x08);
+		MySPI_Set_NSS();
+		MySPI_Clear_NSS();
 		MySPI_Send(0x2C);
 		MySPI_Send(0x0A);
+		MySPI_Set_NSS();
+		MySPI_Clear_NSS();
 		MySPI_Send(0x31);
 		MySPI_Send(0x03);
 		MySPI_Set_NSS();
