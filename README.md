@@ -18,9 +18,9 @@ _PA5:    Do Not Connect_
 
 **PA7**:    Battery level
     
-**PA9**:    RX UART
+**PA9**:    TX UART
 
-**PA10**:   TX UART
+**PA10**:   RX UART
 
 _PA13:    Do Not Connect_
 
