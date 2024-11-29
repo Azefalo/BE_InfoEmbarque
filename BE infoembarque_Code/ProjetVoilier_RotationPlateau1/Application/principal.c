@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-#include "MYPLATEAU.h"
->>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 #include "stm32f10x.h"
 #include "MyUSART.h"
 #include "MyGPIO.h"

@@ -4,9 +4,6 @@
 
 //#include "Rotation_plateau.h"
 
-
-
-
 void initPlateau(void) {
 	
     // Initialisation du GPIO pour définir le sens du plateau 

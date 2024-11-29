@@ -456,7 +456,12 @@
             <File>
               <FileName>MyUSART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\MyUSART.c</FilePath>
+              <FilePath>..\Driver\MyUSART.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyPLATEAU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\MyPLATEAU.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -987,7 +992,12 @@
             <File>
               <FileName>MyUSART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\MyUSART.c</FilePath>
+              <FilePath>..\Driver\MyUSART.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyPLATEAU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\MyPLATEAU.c</FilePath>
             </File>
           </Files>
         </Group>
