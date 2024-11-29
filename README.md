@@ -1,5 +1,7 @@
 # BE InfoEmbarque - Project voilier
 
+![Boat](Boat.png)
+
 ## Used pins:
 
 **PA0**:    EncoderA
