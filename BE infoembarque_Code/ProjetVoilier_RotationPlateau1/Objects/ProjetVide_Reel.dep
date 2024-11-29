@@ -1,0 +1,86 @@
+Dependencies for Project 'ProjetVide', Target 'Reel': (DO NOT MODIFY !)
+CompilerVersion: 6220000::V6.22::ARMCLANG
+F (.\Application\principal.c)(0x67499003)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/principal.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (..\Driver\MyUSART.h)(0x673DE053)
+I (..\Driver\MyGPIO.h)(0x673DFDC3)
+I (..\Driver\MyADC.h)(0x673BC230)
+I (..\Driver\MyPLATEAU.h)(0x67498E96)
+I (..\Driver\MyTimer.h)(0x673BC230)
+F (.\USARTtest.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/usarttest.o -MMD)
+F (.\GPIO.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/gpio.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (MyGPIO.h)(0x673BC230)
+F (.\TIMER.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/timer.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (MyGPIO.h)(0x673BC230)
+I (MyTimer.h)(0x673BC230)
+F (.\ADC.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/adc.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (MyGPIO.h)(0x673BC230)
+I (MyTimer.h)(0x673BC230)
+I (MyADC.h)(0x673BC230)
+F (..\Driver\MyGPIO.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/mygpio.o -MMD)
+I (..\Driver\MyGPIO.h)(0x673DFDC3)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+F (..\Driver\MyTimer.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/mytimer.o -MMD)
+I (..\Driver\MyTimer.h)(0x673BC230)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (..\Driver\MyGPIO.h)(0x673DFDC3)
+F (..\Driver\MyADC.c)(0x673DE269)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myadc.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (..\Driver\MyGPIO.h)(0x673DFDC3)
+I (..\Driver\MyTimer.h)(0x673BC230)
+I (..\Driver\MyADC.h)(0x673BC230)
+F (..\Driver\MyEncoder.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myencoder.o -MMD)
+I (..\Driver\MyGPIO.h)(0x673DFDC3)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (..\Driver\MyTimer.h)(0x673BC230)
+I (..\Driver\MyEncoder.h)(0x673BC230)
+F (.\MyPLATEAU.c)(0x67498FA8)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myplateau.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (MyPLATEAU.h)(0x67498E96)
+I (..\Driver\MyUSART.h)(0x673DE053)
+I (MyTimer.h)(0x673BC230)
+I (MyGPIO.h)(0x673BC230)
+F (..\Driver\MyUSART.c)(0x674993FA)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myusart.o -MMD)
+I (..\Driver\MyGPIO.h)(0x673DFDC3)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (..\Driver\MyUSART.h)(0x673DE053)
+F (RTE/Device/STM32F103RB/RTE_Device.h)(0x673BC230)()
+F (RTE/Device/STM32F103RB/startup_stm32f10x_md.s)(0x673BC230)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
+F (RTE/Device/STM32F103RB/system_stm32f10x.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MMD)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
+I (RTE\_Reel\RTE_Components.h)(0x673DFDB6)
+I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
+I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
