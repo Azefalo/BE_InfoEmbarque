@@ -4,6 +4,7 @@ Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
 
 Section Cross References
 
+<<<<<<< HEAD
     principal.o(.text.main) refers to myusart.o(.text.UART1_Init) for UART1_Init
     principal.o(.text.main) refers to myplateau.o(.text.initPlateau) for initPlateau
     principal.o(.text.main) refers to mygpio.o(.text.MyGPIO_Init) for MyGPIO_Init
@@ -14,6 +15,8 @@ Section Cross References
     principal.o(.text.main) refers to ddiv.o(.text) for __aeabi_ddiv
     principal.o(.text.main) refers to dfixi.o(.text) for __aeabi_d2iz
     principal.o(.text.main) refers to myusart.o(.text.UART1_SendData) for UART1_SendData
+=======
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     principal.o(.ARM.exidx.text.main) refers to principal.o(.text.main) for [Anonymous Symbol]
     gpio.o(.text.GPIO) refers to mygpio.o(.text.MyGPIO_Init) for MyGPIO_Init
     gpio.o(.text.GPIO) refers to mygpio.o(.text.MyGPIO_Read) for MyGPIO_Read
@@ -73,6 +76,7 @@ Section Cross References
     myplateau.o(.text.initPlateau) refers to mytimer.o(.text.MyTimer_PWM) for MyTimer_PWM
     myplateau.o(.text.initPlateau) refers to mytimer.o(.text.MyTimer_SetDutyCycle) for MyTimer_SetDutyCycle
     myplateau.o(.ARM.exidx.text.initPlateau) refers to myplateau.o(.text.initPlateau) for [Anonymous Symbol]
+<<<<<<< HEAD
     myplateau.o(.ARM.exidx.text.mapToDirection) refers to myplateau.o(.text.mapToDirection) for [Anonymous Symbol]
     myplateau.o(.text.updateBoatDirectionAndSpeed) refers to myplateau.o(.text.mapToDirection) for mapToDirection
     myplateau.o(.text.updateBoatDirectionAndSpeed) refers to myplateau.o(.bss.vitesse) for vitesse
@@ -91,6 +95,13 @@ Section Cross References
     myusart.o(.text.UART1_SendData) refers to printfa.o(i.__0snprintf) for snprintf
     myusart.o(.text.UART1_SendData) refers to myusart.o(.text.UART1_SendString) for UART1_SendString
     myusart.o(.ARM.exidx.text.UART1_SendData) refers to myusart.o(.text.UART1_SendData) for [Anonymous Symbol]
+=======
+    myplateau.o(.text.orientationPlateau) refers to mygpio.o(.text.MyGPIO_Set) for MyGPIO_Set
+    myplateau.o(.text.orientationPlateau) refers to mygpio.o(.text.MyGPIO_Reset) for MyGPIO_Reset
+    myplateau.o(.text.orientationPlateau) refers to ffixi.o(.text) for __aeabi_f2iz
+    myplateau.o(.text.orientationPlateau) refers to mytimer.o(.text.MyTimer_SetDutyCycle) for MyTimer_SetDutyCycle
+    myplateau.o(.ARM.exidx.text.orientationPlateau) refers to myplateau.o(.text.orientationPlateau) for [Anonymous Symbol]
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
     startup_stm32f10x_md.o(RESET) refers to mytimer.o(.text.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
@@ -115,6 +126,7 @@ Section Cross References
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+<<<<<<< HEAD
     printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
     printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
     printfa.o(i.__0fprintf) refers to fputc.o(i.fputc) for fputc
@@ -166,6 +178,9 @@ Section Cross References
     dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
     dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+=======
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
     entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
@@ -213,6 +228,7 @@ Removing Unused input sections from the image.
     Removing adc.o(.text.ADC), (168 bytes).
     Removing adc.o(.ARM.exidx.text.ADC), (8 bytes).
     Removing mygpio.o(.text), (0 bytes).
+    Removing mygpio.o(.text.MyGPIO_Init), (284 bytes).
     Removing mygpio.o(.ARM.exidx.text.MyGPIO_Init), (8 bytes).
     Removing mygpio.o(.text.MyGPIO_Read), (42 bytes).
     Removing mygpio.o(.ARM.exidx.text.MyGPIO_Read), (8 bytes).
@@ -221,6 +237,7 @@ Removing Unused input sections from the image.
     Removing mygpio.o(.text.MyGPIO_Toggle), (30 bytes).
     Removing mygpio.o(.ARM.exidx.text.MyGPIO_Toggle), (8 bytes).
     Removing mytimer.o(.text), (0 bytes).
+    Removing mytimer.o(.text.MyTimer_Base_Init), (254 bytes).
     Removing mytimer.o(.ARM.exidx.text.MyTimer_Base_Init), (8 bytes).
     Removing mytimer.o(.ARM.exidx.text.TIM1_UP_IRQHandler), (8 bytes).
     Removing mytimer.o(.ARM.exidx.text.TIM2_IRQHandler), (8 bytes).
@@ -234,7 +251,9 @@ Removing Unused input sections from the image.
     Removing mytimer.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
     Removing mytimer.o(.text.MyTimer_ActivateIT1), (228 bytes).
     Removing mytimer.o(.ARM.exidx.text.MyTimer_ActivateIT1), (8 bytes).
+    Removing mytimer.o(.text.MyTimer_PWM), (220 bytes).
     Removing mytimer.o(.ARM.exidx.text.MyTimer_PWM), (8 bytes).
+    Removing mytimer.o(.text.MyTimer_SetDutyCycle), (118 bytes).
     Removing mytimer.o(.ARM.exidx.text.MyTimer_SetDutyCycle), (8 bytes).
     Removing myadc.o(.text), (0 bytes).
     Removing myadc.o(.ARM.exidx.text.configadc), (8 bytes).
@@ -251,6 +270,7 @@ Removing Unused input sections from the image.
     Removing myencoder.o(.text.MyTimer_Encoder_Reset), (12 bytes).
     Removing myencoder.o(.ARM.exidx.text.MyTimer_Encoder_Reset), (8 bytes).
     Removing myplateau.o(.text), (0 bytes).
+<<<<<<< HEAD
     Removing myplateau.o(.ARM.exidx.text.initPlateau), (8 bytes).
     Removing myplateau.o(.ARM.exidx.text.mapToDirection), (8 bytes).
     Removing myplateau.o(.ARM.exidx.text.updateBoatDirectionAndSpeed), (8 bytes).
@@ -263,6 +283,12 @@ Removing Unused input sections from the image.
     Removing myusart.o(.ARM.exidx.text.UART1_SendChar), (8 bytes).
     Removing myusart.o(.ARM.exidx.text.UART1_SendString), (8 bytes).
     Removing myusart.o(.ARM.exidx.text.UART1_SendData), (8 bytes).
+=======
+    Removing myplateau.o(.text.initPlateau), (126 bytes).
+    Removing myplateau.o(.ARM.exidx.text.initPlateau), (8 bytes).
+    Removing myplateau.o(.text.orientationPlateau), (74 bytes).
+    Removing myplateau.o(.ARM.exidx.text.orientationPlateau), (8 bytes).
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     Removing startup_stm32f10x_md.o(HEAP), (512 bytes).
     Removing system_stm32f10x.o(.text), (0 bytes).
     Removing system_stm32f10x.o(.ARM.exidx.text.SystemInit), (8 bytes).
@@ -272,8 +298,13 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72), (8 bytes).
     Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
     Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
+    Removing ffixi.o(.text), (50 bytes).
 
+<<<<<<< HEAD
 75 unused section(s) (total 2565 bytes) removed from the image.
+=======
+76 unused section(s) (total 3842 bytes) removed from the image.
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
 ==============================================================================
 
@@ -299,6 +330,7 @@ Image Symbol Table
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+<<<<<<< HEAD
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
@@ -316,6 +348,10 @@ Image Symbol Table
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+=======
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixi.o ABSOLUTE
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     ADC.c                                    0x00000000   Number         0  adc.o ABSOLUTE
     GPIO.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
     MyADC.c                                  0x00000000   Number         0  myadc.o ABSOLUTE
@@ -345,6 +381,7 @@ Image Symbol Table
     .ARM.Collect$$$$0000000F                 0x080000fc   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
     .ARM.Collect$$$$00002712                 0x080000fc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x08000100   Section       36  startup_stm32f10x_md.o(.text)
+<<<<<<< HEAD
     .text                                    0x08000124   Section        0  dmul.o(.text)
     .text                                    0x08000208   Section        0  ddiv.o(.text)
     .text                                    0x080002e6   Section        0  dfltui.o(.text)
@@ -402,6 +439,22 @@ Image Symbol Table
     i._snputc                                0x08001a0a   Section        0  printfa.o(i._snputc)
     .L.str                                   0x08001a20   Data          10  myusart.o(.rodata.str1.1)
     [Anonymous Symbol]                       0x08001a20   Section        0  myusart.o(.rodata.str1.1)
+=======
+    .text                                    0x08000124   Section       48  init.o(.text)
+    SetSysClock                              0x08000155   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x08000154   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x0800015d   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x0800015c   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000280   Section        0  system_stm32f10x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x080002e8   Section        0  mytimer.o(.text.TIM1_UP_IRQHandler)
+    [Anonymous Symbol]                       0x08000318   Section        0  mytimer.o(.text.TIM2_IRQHandler)
+    [Anonymous Symbol]                       0x08000348   Section        0  mytimer.o(.text.TIM3_IRQHandler)
+    [Anonymous Symbol]                       0x08000378   Section        0  mytimer.o(.text.TIM4_IRQHandler)
+    [Anonymous Symbol]                       0x080003a8   Section        0  principal.o(.text.main)
+    i.__scatterload_copy                     0x080003ac   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080003ba   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080003bc   Section       14  handlers.o(i.__scatterload_zeroinit)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     Timer_Callback                           0x20000000   Data           4  mytimer.o(.bss.Timer_Callback)
     [Anonymous Symbol]                       0x20000000   Section        0  mytimer.o(.bss.Timer_Callback)
     STACK                                    0x20000008   Section     1024  startup_stm32f10x_md.o(STACK)
@@ -476,6 +529,7 @@ Image Symbol Table
     USB_HP_CAN1_TX_IRQHandler                0x0800011b   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USB_LP_CAN1_RX0_IRQHandler               0x0800011b   Thumb Code     0  startup_stm32f10x_md.o(.text)
     WWDG_IRQHandler                          0x0800011b   Thumb Code     0  startup_stm32f10x_md.o(.text)
+<<<<<<< HEAD
     __aeabi_dmul                             0x08000125   Thumb Code   228  dmul.o(.text)
     __aeabi_ddiv                             0x08000209   Thumb Code   222  ddiv.o(.text)
     __aeabi_ui2d                             0x080002e7   Thumb Code    26  dfltui.o(.text)
@@ -532,6 +586,21 @@ Image Symbol Table
     Region$$Table$$Base                      0x08001a2c   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x08001a3c   Number         0  anon$$obj.o(Region$$Table)
     vitesse                                  0x20000004   Data           1  myplateau.o(.bss.vitesse)
+=======
+    __scatterload                            0x08000125   Thumb Code    38  init.o(.text)
+    __scatterload_rt2                        0x08000125   Thumb Code     0  init.o(.text)
+    SystemInit                               0x08000281   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    TIM1_UP_IRQHandler                       0x080002e9   Thumb Code    48  mytimer.o(.text.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x08000319   Thumb Code    46  mytimer.o(.text.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08000349   Thumb Code    48  mytimer.o(.text.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08000379   Thumb Code    48  mytimer.o(.text.TIM4_IRQHandler)
+    main                                     0x080003a9   Thumb Code     4  principal.o(.text.main)
+    __scatterload_copy                       0x080003ad   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080003bb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080003bd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x080003cc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080003dc   Number         0  anon$$obj.o(Region$$Table)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
     __initial_sp                             0x20000408   Data           0  startup_stm32f10x_md.o(STACK)
 
 
@@ -542,6 +611,7 @@ Memory Map of the image
 
   Image Entry point : 0x08000101
 
+<<<<<<< HEAD
   Load Region LR_1 (Base: 0x08000000, Size: 0x00001a3c, Max: 0xffffffff, ABSOLUTE)
 
     Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001a3c, Max: 0xffffffff, ABSOLUTE)
@@ -630,18 +700,66 @@ Memory Map of the image
 
 
     Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08001a3c, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+=======
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000003dc, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000003dc, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO          126    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          150  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          155    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          158    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          160    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          162    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          163    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          165    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          167    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          156    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x08000100   0x00000024   Code   RO          127  * .text               startup_stm32f10x_md.o
+    0x08000124   0x08000124   0x00000030   Code   RO          170    .text               mc_w.l(init.o)
+    0x08000154   0x08000154   0x00000008   Code   RO          136    .text.SetSysClock   system_stm32f10x.o
+    0x0800015c   0x0800015c   0x00000122   Code   RO          140    .text.SetSysClockTo72  system_stm32f10x.o
+    0x0800027e   0x0800027e   0x00000002   PAD
+    0x08000280   0x08000280   0x00000066   Code   RO          134    .text.SystemInit    system_stm32f10x.o
+    0x080002e6   0x080002e6   0x00000002   PAD
+    0x080002e8   0x080002e8   0x00000030   Code   RO           58    .text.TIM1_UP_IRQHandler  mytimer.o
+    0x08000318   0x08000318   0x0000002e   Code   RO           60    .text.TIM2_IRQHandler  mytimer.o
+    0x08000346   0x08000346   0x00000002   PAD
+    0x08000348   0x08000348   0x00000030   Code   RO           62    .text.TIM3_IRQHandler  mytimer.o
+    0x08000378   0x08000378   0x00000030   Code   RO           64    .text.TIM4_IRQHandler  mytimer.o
+    0x080003a8   0x080003a8   0x00000004   Code   RO            2    .text.main          principal.o
+    0x080003ac   0x080003ac   0x0000000e   Code   RO          174    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080003ba   0x080003ba   0x00000002   Code   RO          175    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080003bc   0x080003bc   0x0000000e   Code   RO          176    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080003ca   0x080003ca   0x00000002   PAD
+    0x080003cc   0x080003cc   0x00000010   Data   RO          173    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080003dc, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
     **** No section assigned to this execution region ****
 
 
+<<<<<<< HEAD
     Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x08001a3c, Size: 0x00000408, Max: 0xffffffff, ABSOLUTE)
+=======
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080003dc, Size: 0x00000408, Max: 0xffffffff, ABSOLUTE)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000        -       0x00000004   Zero   RW           78    .bss.Timer_Callback  mytimer.o
+<<<<<<< HEAD
     0x20000004        -       0x00000001   Zero   RW          123    .bss.vitesse        myplateau.o
     0x20000005   0x08001a3c   0x00000003   PAD
     0x20000008        -       0x00000400   Zero   RW          148    STACK               startup_stm32f10x_md.o
+=======
+    0x20000004   0x080003dc   0x00000004   PAD
+    0x20000008        -       0x00000400   Zero   RW          124    STACK               startup_stm32f10x_md.o
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
 
 ==============================================================================
@@ -651,6 +769,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
+<<<<<<< HEAD
        196          0          0          0          0       1708   myadc.o
        332          0          0          0          0       2087   mygpio.o
        436          0          0          0          1       3077   myplateau.o
@@ -664,6 +783,17 @@ Image component sizes
       2656          8        264          0       1032      21165   Object Totals
          0          0         16          0          0          0   (incl. Generated)
         30          0          2          0          3          0   (incl. Padding)
+=======
+       190          0          0          0          4       6216   mytimer.o
+         4          0          0          0          0        416   principal.o
+        36          8        236          0       1024        872   startup_stm32f10x_md.o
+       400          0          0          0          0       2969   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+       636          8        252          0       1032      10473   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         6          0          0          0          4          0   (incl. Padding)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
     ----------------------------------------------------------------------
 
@@ -696,8 +826,13 @@ Image component sizes
        228          0          0          0          0         96   dmul.o
 
     ----------------------------------------------------------------------
+<<<<<<< HEAD
       3796        102          0          0          0       1780   Library Totals
          4          0          0          0          0          0   (incl. Padding)
+=======
+       100         18          0          0          0         68   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
     ----------------------------------------------------------------------
 
@@ -707,7 +842,11 @@ Image component sizes
       1154          0          0          0          0        812   mf_w.l
 
     ----------------------------------------------------------------------
+<<<<<<< HEAD
       3796        102          0          0          0       1780   Library Totals
+=======
+       100         18          0          0          0         68   Library Totals
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
     ----------------------------------------------------------------------
 
@@ -716,6 +855,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
+<<<<<<< HEAD
       6452        110        264          0       1032      22041   Grand Totals
       6452        110        264          0       1032      22041   ELF Image Totals
       6452        110        264          0          0          0   ROM Totals
@@ -725,6 +865,17 @@ Image component sizes
     Total RO  Size (Code + RO Data)                 6716 (   6.56kB)
     Total RW  Size (RW Data + ZI Data)              1032 (   1.01kB)
     Total ROM Size (Code + RO Data + RW Data)       6716 (   6.56kB)
+=======
+       736         26        252          0       1032      10653   Grand Totals
+       736         26        252          0       1032      10653   ELF Image Totals
+       736         26        252          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  988 (   0.96kB)
+    Total RW  Size (RW Data + ZI Data)              1032 (   1.01kB)
+    Total ROM Size (Code + RO Data + RW Data)        988 (   0.96kB)
+>>>>>>> 12cccba466cff6a655d52584506d1ca999f1c7db
 
 ==============================================================================
 

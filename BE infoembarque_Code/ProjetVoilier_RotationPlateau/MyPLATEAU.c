@@ -1,8 +1,8 @@
-#include "stm32f10x.h"
-#include "MyPLATEAU.h"
+#include "MyTimer.h"
+#include "MyGPIO.h"
+#include "MYPLATEAU.h"
 
 //#include "Rotation_plateau.h"
-
 
 void initPlateau(void) {
 	
@@ -56,8 +56,7 @@ void updateBoatDirectionAndSpeed(uint8_t receivedData) {
     } else {                        // Arrêt
         vitesse = 0;
 			  MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
-    }
-}
+			
 
 // Fonction d'interruption pour la réception de données
 void USART1_IRQHandler(void) {
@@ -66,12 +65,3 @@ void USART1_IRQHandler(void) {
         updateBoatDirectionAndSpeed(receivedData);  // Mettre à jour sens et vitesse
     }
 }
-//// Fonction pour orienter le plateau avec un sens et un duty cycle
-//void orientationPlateau(int sens, float dutycycle) {
-//    if (sens == 1) {
-//        MyGPIO_Set(GPIOB, 8);   // Régler le sens à 1
-//    } else {
-//        MyGPIO_Reset(GPIOB, 8); // Régler le sens à 0
-//    }
-//    MyTimer_SetDutyCycle(TIM4 ,3 ,dutycycle);
-//}

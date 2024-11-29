@@ -1,4 +1,3 @@
-
 #include "stm32f10x.h"
 #include "MyUSART.h"
 #include "MyGPIO.h"
@@ -36,4 +35,4 @@ int main(void) {
         }
         
     return 0;
-}
+	  }
