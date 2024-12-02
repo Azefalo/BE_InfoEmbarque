@@ -9,6 +9,7 @@
 #define seuilmax 12 //463 et 474
 
 
+
 int main(void) {
     // Initialisation de l'UART
     UART1_Init();
@@ -32,7 +33,7 @@ int main(void) {
         // Envoyer les données toutes les 100 ms
         UART1_SendData(direction, batterylevel, roll_angle);
         for (volatile int i = 0; i < 5000000; i++);  // Temporisation d'environ 100 ms
-        }
-        
+    }
+
     return 0;
-	  }
+}

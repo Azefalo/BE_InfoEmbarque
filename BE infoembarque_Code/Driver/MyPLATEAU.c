@@ -23,8 +23,8 @@ void initPlateau(void) {
 	  // Calcul de la période pour atteindre une fréquence de 20 kHz
    	MyTimer_Struct_TypeDef TIM;
 	  TIM.Timer=TIM4;
-    TIM.ARR=359; //f=20kHZ
-	  TIM.PSC=99;
+    TIM.ARR=89; //f=20kHZ
+	  TIM.PSC=19;
 	  MyTimer_Base_Init(&TIM);
 		
 		MyTimer_PWM(TIM.Timer,3);
@@ -32,40 +32,45 @@ void initPlateau(void) {
     MyTimer_Base_Start(TIM4);
 }
 
+volatile int8_t receivedData = 0;  // Variable pour stocker la direction reçue
+volatile int vitesse = 0;   // Vitesse du bateau (0 à 100)
 
-volatile int8_t sens = 0;       // 1 pour avancer, -1 pour reculer, 0 pour arrêt
-volatile int8_t vitesse = 0;   // Vitesse du bateau (0 à 100)
 
-// Fonction pour mapper une valeur de la plage [0, 255] vers [-100, 100]
-int8_t mapToDirection(uint8_t receivedData) {
-    // Conversion linéaire : y = (receivedData * 200 / 255) - 100
-    return (int8_t)((receivedData * 200 / 255) - 100);
-}
 
 // Fonction pour définir le sens et la vitesse du bateau
 void updateBoatDirectionAndSpeed(uint8_t receivedData) {
-	  //initPlateau();
-    vitesse = mapToDirection(receivedData);  // Convertir la donnée en direction
-		if (vitesse >= 2 && vitesse <= 100) {
-        MyGPIO_Set(GPIOA,6);                             // Avancer
+	  initPlateau();
+	  if (receivedData >= 0x9C && receivedData <= 0xFF) {
+        vitesse=(int)(256-receivedData);
+			  MyGPIO_Set(GPIOA,6);                             // Avancer
 		    MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
-        vitesse = (uint8_t)(vitesse);    // Vitesse proportionnelle à la donnée reçue
-    } else if (vitesse <= -2 && vitesse >= -100) {
-        MyGPIO_Reset(GPIOA,6);                            // Reculer
+    } else if (receivedData > 0x00 && receivedData <= 0x64) {
+        vitesse=(int)(receivedData);
+			  MyGPIO_Reset(GPIOA,6);                            // Reculer
 		    MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
-    } else {                        // Arrêt
-        vitesse = 0;
-			  MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
-    }
+    }                     
+    vitesse = 0; // Arrêt
+	  MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
 }
 
 // Fonction d'interruption pour la réception de données
 void USART1_IRQHandler(void) {
     if (USART1->SR & USART_SR_RXNE) {         // Vérifier si le registre de réception est prêt
-        uint8_t receivedData = USART1->DR;   // Lire la donnée brute reçue (0-255)
-        updateBoatDirectionAndSpeed(receivedData);  // Mettre à jour sens et vitesse
+        uint8_t receivedData = (int8_t)USART1->DR;   // Lire la donnée brute reçue (0-255)
+ 			if(receivedData!=0)
+         updateBoatDirectionAndSpeed(receivedData);  // Mettre à jour sens et vitesse
     }
 }
+
+//volatile int8_t received_direction = 0;  // Variable pour stocker la direction reçue
+
+//// Fonction d'interruption pour la réception de données
+//void USART1_IRQHandler(void) {
+//    if (USART1->SR & USART_SR_RXNE) {     // Vérifier si le registre de réception est prêt
+//        received_direction = (int8_t)USART1->DR;  // Lire la direction reçue depuis la télécommande
+//    }
+//}
+
 //// Fonction pour orienter le plateau avec un sens et un duty cycle
 //void orientationPlateau(int sens, float dutycycle) {
 //    if (sens == 1) {

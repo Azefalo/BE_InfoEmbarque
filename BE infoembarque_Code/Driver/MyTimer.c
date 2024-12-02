@@ -3,6 +3,7 @@
 
 //active IT avec pointeur de fonction 
 static void (*Timer_Callback)(void) = 0; // Pointeur de fonction pour le callback
+
 void MyTimer_Base_Init(MyTimer_Struct_TypeDef *Timer)
 {
   if(Timer->Timer == TIM1)
