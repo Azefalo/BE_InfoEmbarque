@@ -36,13 +36,11 @@ _PA3:    Do Not Connect_
 
 _PA4:    Do Not Connect_
 
-**PB5**:    Temps Réel
-
-**PB6**:    Temps Réel
-
-**PB7**:    Temps Réel
-
 **PB8**:    Plateau
+
+**PB10**:    Temps Réel
+
+**PB11**:    Temps Réel
 
 **PB12**:    Roulis
 
