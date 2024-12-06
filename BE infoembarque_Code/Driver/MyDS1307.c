@@ -10,30 +10,26 @@ void DS1307_Init(I2C_TypeDef *I2Cx) {
     MyI2C_RecSendData_Typedef controlData = {DS1307_ADDRESS, &control, 1};
     MyI2C_PutString(I2Cx, DS1307_REG_CONTROL, &controlData);
 }
-
 static uint8_t BCD_to_Decimal(uint8_t bcd) {
     return ((bcd >> 4) * 10) + (bcd & 0x0F);
 }
-static uint8_t Decimal_to_BCD(uint8_t decimal) {
-    return ((decimal / 10) << 4) | (decimal % 10);
-}
 
-void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
-    uint8_t data[7];
+//void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
+//    uint8_t data[7];
 
-    // Convertit les valeurs décimales en BCD
-    data[0] = Decimal_to_BCD(timeDate->seconds);
-    data[1] = Decimal_to_BCD(timeDate->minutes);
-    data[2] = Decimal_to_BCD(timeDate->hours);
-    data[3] = Decimal_to_BCD(timeDate->day_of_week);
-    data[4] = Decimal_to_BCD(timeDate->date);
-    data[5] = Decimal_to_BCD(timeDate->month);
-    data[6] = Decimal_to_BCD(timeDate->year);
+//    // Convertit les valeurs décimales en BCD
+//    data[0] = Decimal_to_BCD(timeDate->seconds);
+//    data[1] = Decimal_to_BCD(timeDate->minutes);
+//    data[2] = Decimal_to_BCD(timeDate->hours);
+//    data[3] = Decimal_to_BCD(timeDate->day_of_week);
+//    data[4] = Decimal_to_BCD(timeDate->date);
+//    data[5] = Decimal_to_BCD(timeDate->month);
+//    data[6] = Decimal_to_BCD(timeDate->year);
 
-    // Écrit les données dans les registres correspondants du DS1307
-    MyI2C_RecSendData_Typedef timeData = {DS1307_ADDRESS, (char *)data, 7};
-    MyI2C_PutString(I2Cx, DS1307_REG_SECONDS, &timeData);  // Commence l'écriture à partir de DS1307_REG_SECONDS (0x00)
-}
+//    // Écrit les données dans les registres correspondants du DS1307
+//    MyI2C_RecSendData_Typedef timeData = {DS1307_ADDRESS, (char *)data, 7};
+//    MyI2C_PutString(I2Cx, DS1307_REG_SECONDS, &timeData);  // Commence l'écriture à partir de DS1307_REG_SECONDS (0x00)
+//}
 
 void DS1307_GetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
     uint8_t data[7];

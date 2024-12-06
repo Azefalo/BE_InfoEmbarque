@@ -27,60 +27,27 @@ Project File Date:  12/06/2024
 <h2>Output:</h2>
 *** Using Compiler 'V6.22', folder: 'C:\Users\logar\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Reel'
-compiling USARTtest.c...
-compiling GPIO.c...
-compiling MyGPIO.c...
+compiling ADC.c...
+compiling TIMER.c...
+compiling MyUSART.c...
 compiling MyEncoder.c...
-Application/principal.c(7): warning: unused variable 'error' [-Wunused-variable]
-    7 |     MyI2C_Err_Enum error = MyI2C_Get_Error(I2C1);
-      |                    ^~~~~
+compiling GPIO.c...
+compiling MyADC.c...
+compiling MyTimer.c...
+compiling MyDS1307.c...
+compiling MyGPIO.c...
+Application/principal.c(3): warning: In file included from...
+../Driver\DS1307.h(29): warning: unused function 'BCD_to_Decimal' [-Wunused-function]
+   29 | static uint8_t BCD_to_Decimal(uint8_t bcd);
+      |                ^~~~~~~~~~~~~~
 1 warning generated.
 compiling principal.c...
-compiling TIMER.c...
-compiling MyADC.c...
-compiling ADC.c...
-compiling MyUSART.c...
 compiling MyPLATEAU.c...
-compiling MyTimer.c...
-MyDS1307.c(1): warning: In file included from...
-.\DS1307.h(4): error: unknown type name 'DS1307_TimeDate'
-    4 | void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate);
-      |                                        ^
-.\DS1307.h(5): error: unknown type name 'DS1307_TimeDate'
-    5 | void DS1307_GetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate);
-      |                                        ^
-MyDS1307.c(5): error: use of undeclared identifier 'NULL'
-    5 |     MyI2C_Init(I2Cx, 2, NULL);
-      |                         ^
-MyDS1307.c(9): error: use of undeclared identifier 'DS1307_ADDRESS'
-    9 |     MyI2C_RecSendData_Typedef controlData = {DS1307_ADDRESS, &control, 1};
-      |                                              ^
-MyDS1307.c(10): error: use of undeclared identifier 'DS1307_REG_CONTROL'
-   10 |     MyI2C_PutString(I2Cx, DS1307_REG_CONTROL, &controlData);
-      |                           ^
-MyDS1307.c(13): error: unknown type name 'DS1307_TimeDate'
-   13 | void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
-      |                                        ^
-MyDS1307.c(26): error: use of undeclared identifier 'DS1307_ADDRESS'
-   26 |     MyI2C_RecSendData_Typedef timeData = {DS1307_ADDRESS, (uint8_t *)data, 7};  // Correctly cast to uint8_t pointer
-      |                                           ^
-MyDS1307.c(27): error: use of undeclared identifier 'DS1307_REG_SECONDS'
-   27 |     MyI2C_PutString(I2Cx, DS1307_REG_SECONDS, &timeData);
-      |                           ^
-MyDS1307.c(30): error: unknown type name 'DS1307_TimeDate'
-   30 | void DS1307_GetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
-      |                                        ^
-MyDS1307.c(34): error: use of undeclared identifier 'DS1307_ADDRESS'
-   34 |     MyI2C_RecSendData_Typedef timeData = {DS1307_ADDRESS, (uint8_t *)data, 7};  // Correctly cast to uint8_t pointer
-      |                                           ^
-MyDS1307.c(35): error: use of undeclared identifier 'DS1307_REG_SECONDS'
-   35 |     MyI2C_GetString(I2Cx, DS1307_REG_SECONDS, &timeData);
-      |                           ^
-11 errors generated.
-compiling MyDS1307.c...
-compiling system_stm32f10x.c...
 assembling startup_stm32f10x_md.s...
-".\Objects\Projet3FISA.axf" - 11 Error(s), 1 Warning(s).
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=4444 RO-data=268 RW-data=20 ZI-data=1648  
+".\Objects\Projet3FISA.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -111,8 +78,7 @@ Package Vendor: Keil
       Source file:   Device/Source/system_stm32f10x.c
       Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
-Target not created.
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
