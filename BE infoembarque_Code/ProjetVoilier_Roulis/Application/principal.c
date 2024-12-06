@@ -3,14 +3,14 @@
 #include "MyTimer.h"
 #include "MyADC.h"
 #include "MySPI.h"
-
+#include <math.h>
  
 int main(void)
 { 
 		unsigned char Demande =0xF2;
-		uint16_t x;
-		uint16_t y;
-		uint16_t z;
+		int16_t x;
+		int16_t y;
+		int16_t z;
 		unsigned char Message[6];
 	
 		/*MyGPIO_Struct_TypeDef SPI_CLK;//On met notre consigne du servo moteur sur B0 vu qu'on utilise TIM3
@@ -56,8 +56,10 @@ int main(void)
 		MySPI_Set_NSS();
 		MySPI_Clear_NSS();
 		MySPI_Send(0x31);
-		MySPI_Send(0x03);
+		MySPI_Send(0x0B);
 		MySPI_Set_NSS();
+		
+		float angle_roulis;
 
 	while(1){
 		MySPI_Clear_NSS();
@@ -67,9 +69,15 @@ int main(void)
 			Message[i]=MySPI_Read();
 		}
 		MySPI_Set_NSS();
-		x=((uint16_t)Message[0]<<8)+(uint16_t)Message[1];
-		y=((uint16_t)Message[2]<<8)+(uint16_t)Message[3];
-		z=((uint16_t)Message[4]<<8)+(uint16_t)Message[5];
+		x=((uint16_t)Message[1]<<8)+(uint16_t)Message[0];
+		y=((uint16_t)Message[3]<<8)+(uint16_t)Message[2];//messge 2et 4 info utile
+		z=((uint16_t)Message[5]<<8)+(uint16_t)Message[4];
+		angle_roulis=360*atanf((float)z/(float)y)/(2*3.1415)+90;
+		
+		if (angle_roulis>=90){
+			angle_roulis=fabs(angle_roulis-180);
+		}
+		
 	}
 	
 }
