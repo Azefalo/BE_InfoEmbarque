@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Projet3FISA.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Projet3FISA.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri Nov 29 21:25:29 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri Dec  6 08:32:02 2024
 <BR><P>
 <H3>Maximum Stack Usage =        324 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -941,13 +941,13 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a3]"></a>MyGPIO_Reset</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, mygpio.o(.text.MyGPIO_Reset))
+<P><STRONG><a name="[a2]"></a>MyGPIO_Reset</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, mygpio.o(.text.MyGPIO_Reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyGPIO_Reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateBoatDirectionAndSpeed
 </UL>
 
-<P><STRONG><a name="[a2]"></a>MyGPIO_Set</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, mygpio.o(.text.MyGPIO_Set))
+<P><STRONG><a name="[a3]"></a>MyGPIO_Set</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, mygpio.o(.text.MyGPIO_Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyGPIO_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateBoatDirectionAndSpeed
@@ -1079,12 +1079,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[97]"></a>updateBoatDirectionAndSpeed</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, myplateau.o(.text.updateBoatDirectionAndSpeed))
+<P><STRONG><a name="[97]"></a>updateBoatDirectionAndSpeed</STRONG> (Thumb, 192 bytes, Stack size 24 bytes, myplateau.o(.text.updateBoatDirectionAndSpeed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = updateBoatDirectionAndSpeed &rArr; initPlateau &rArr; MyTimer_SetDutyCycle
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_SetDutyCycle
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Reset
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Reset
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initPlateau
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler

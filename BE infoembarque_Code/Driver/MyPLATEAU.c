@@ -40,17 +40,19 @@ volatile int vitesse = 0;   // Vitesse du bateau (0 à 100)
 // Fonction pour définir le sens et la vitesse du bateau
 void updateBoatDirectionAndSpeed(uint8_t receivedData) {
 	  initPlateau();
-	  if (receivedData >= 0x9C && receivedData <= 0xFF) {
+	  if (receivedData >= 0x9C && receivedData < 0xFF) {
         vitesse=(int)(256-receivedData);
-			  MyGPIO_Set(GPIOA,6);                             // Avancer
+			  MyGPIO_Reset(GPIOA,6);                             // Avancer
 		    MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
     } else if (receivedData > 0x00 && receivedData <= 0x64) {
         vitesse=(int)(receivedData);
-			  MyGPIO_Reset(GPIOA,6);                            // Reculer
+			  MyGPIO_Set(GPIOA,6);                            // Reculer
 		    MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
-    }                     
+    }  
+    else{
     vitesse = 0; // Arrêt
 	  MyTimer_SetDutyCycle(TIM4 ,3 ,vitesse);
+		}
 }
 
 // Fonction d'interruption pour la réception de données
