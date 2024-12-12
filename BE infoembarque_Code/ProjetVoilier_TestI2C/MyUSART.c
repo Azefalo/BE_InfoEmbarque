@@ -79,3 +79,9 @@ void UART1_SendData(int8_t direction, int8_t battery, int8_t roll_angle) {
     snprintf(buffer, sizeof(buffer), "%d,%d,%d\n", direction, battery, roll_angle); //conversion de la valeur en string
     UART1_SendString(buffer);
 }
+
+void UART1_SendDatatime(int8_t timeh, int8_t timem, int8_t times) {
+    char buffer[32];
+	snprintf(buffer, sizeof(buffer), "%d:%d:%d\n", timeh, timem, times); //conversion de la valeur en string
+    UART1_SendString(buffer);
+}

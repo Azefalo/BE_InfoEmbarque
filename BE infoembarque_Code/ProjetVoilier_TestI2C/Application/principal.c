@@ -13,19 +13,35 @@
 //    }
 //}
 
+
 int main(void)
 {   // Initialisation de l'horloge du système (RCC) et des GPIO nécessaires
-    SystemInit();
+    //SystemInit();
 	  UART1_Init();
 	  DS1307_TimeDate MARC;
+//	  // Définition des valeurs
+//    MARC.seconds = 45;       // 30 secondes
+//    MARC.minutes = 43;       // 45 minutes
+//    MARC.hours = 14;         // 14 heures (2:00 PM en format 24h)
+//    MARC.day_of_week = 4;    // Jeudi (1 = Dimanche, 7 = Samedi)
+//    MARC.date = 12;          // 12 du mois
+//    MARC.month = 12;         // Décembre 
+//    MARC.year = 24; 
+      DS1307_Init(I2C2);
+//	  DS1307_SetTime(I2C2,&MARC);
 
-    DS1307_Init(I2C2);
-
-
+    
     // Boucle principale
     while (1)
     {
-        DS1307_GetTime(I2C2, &MARC);
+			
+			  int8_t timeh = MARC.hours;
+			  int8_t timem = MARC.minutes;
+			  int8_t times = MARC.seconds;
+			  UART1_SendDatatime(timeh,timem,times);
+        for (volatile int i = 0; i < 5000000; i++){  // Temporisation d'environ 100 ms
+        }
+		 }
 			  
-    }
+   
 }
