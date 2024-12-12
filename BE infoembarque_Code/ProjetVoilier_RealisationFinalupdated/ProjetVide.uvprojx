@@ -513,6 +513,16 @@
               <FileType>5</FileType>
               <FilePath>..\Driver\MyUSART.h</FilePath>
             </File>
+            <File>
+              <FileName>myApplication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\myApplication.c</FilePath>
+            </File>
+            <File>
+              <FileName>myApplication.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Driver\myApplication.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1167,6 +1177,16 @@
               <FileName>MyUSART.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Driver\MyUSART.h</FilePath>
+            </File>
+            <File>
+              <FileName>myApplication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\myApplication.c</FilePath>
+            </File>
+            <File>
+              <FileName>myApplication.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Driver\myApplication.h</FilePath>
             </File>
           </Files>
         </Group>
