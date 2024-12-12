@@ -1,63 +1,71 @@
 #include "MyGPIO.h"
 #include "MyUSART.h"
 #include "stdio.h"
-
-void UART1_Init(void) {
-    // Activer l'horloge pour l'USART1 et le port GPIOA
-    RCC->APB2ENR |= RCC_APB2ENR_USART1EN; 
-    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN; 
-
-    // Configurer PA10 (TX) en entrée flottante (émetteur)
-    GPIOA->CRH &= ~GPIO_CRH_MODE10;
-    GPIOA->CRH |= GPIO_CRH_CNF10_0; // PA10 en entrée flottante
-	
-	  // Configurer PA9 en mode Input Floating pour RX
-	  GPIOA->CRH &= ~(GPIO_CRH_MODE9 | GPIO_CRH_CNF9);  // Effacer les bits pour PA9
-    GPIOA->CRH |= GPIO_CRH_CNF9_0;  // Input Floating (mode 01)
-	
-    USART1->CR1 |= USART_CR1_UE; // Activer l'USART
-    USART1->CR1 &= ~USART_CR1_M; // 8 bits de données
-    USART1->CR2 &= USART_CR2_STOP; // 1 bit de stop
-    USART1->BRR |= 468 << 4; // Baud rate à 9600 bps
-    USART1->BRR |= 75; // Baud rate à 9600 bps
-
-    USART1->CR1 |= USART_CR1_RE; // Activer la réception
-    USART1->CR1 |= USART_CR1_RXNEIE;            // Activer l'interruption pour RXNE
-
-    // Activer l'interruption dans NVIC
-    NVIC_EnableIRQ(USART1_IRQn);
-}
-
 //void UART1_Init(void) {
-//    // Activer l'horloge pour USART1
-//    RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
+//    // Activer l'horloge pour l'USART1 et le port GPIOA
+//    RCC->APB2ENR |= RCC_APB2ENR_USART1EN; 
+//    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN; 
 
-//    // Configuration des broches pour USART1 (TX: PA9, RX: PA10)
-//    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;  // Activer l'horloge GPIOA
-//    GPIOA->CRH &= ~(GPIO_CRH_CNF9 | GPIO_CRH_MODE9);  // Clear TX pin config
-//    GPIOA->CRH |= GPIO_CRH_MODE9_1 | GPIO_CRH_CNF9_1; // TX en mode alternatif push-pull
-//    GPIOA->CRH &= ~(GPIO_CRH_CNF10);                 // Clear RX pin config
-//    GPIOA->CRH |= GPIO_CRH_CNF10_0;                  // RX en mode input floating
+//    // Configurer PA10 (RX) en entrï¿½e flottante (rï¿½cepteur)
+//    GPIOA->CRH &= ~GPIO_CRH_MODE10;
+//    GPIOA->CRH |= GPIO_CRH_CNF10_0; // PA10 en entrï¿½e flottante
+//	
+//    USART1->CR1 |= USART_CR1_UE; // Activer l'USART
+//    USART1->CR1 &= ~USART_CR1_M; // 8 bits de donnï¿½es
+//    USART1->CR2 &= USART_CR2_STOP; // 1 bit de stop
+//    USART1->BRR |= 468 << 4; // Baud rate ï¿½ 9600 bps
+//    USART1->BRR |= 75; // Baud rate ï¿½ 9600 bps
 
-//    // Configurer USART1 (baudrate, data bits, stop bits, etc.)
-//    USART1->BRR = 72000000 / 9600;  // Configurer le baudrate pour 9600 bps (72 MHz clock)
-//    USART1->CR1 |= USART_CR1_RE | USART_CR1_TE;  // Activer la réception et la transmission
-//    USART1->CR1 |= USART_CR1_UE;                // Activer USART1
-//    USART1->CR1 |= USART_CR1_RXNEIE;            // Activer l'interruption pour RXNE
-
-//    // Activer l'interruption dans NVIC
-//    NVIC_EnableIRQ(USART1_IRQn);
+//    USART1->CR1 |= USART_CR1_RE; // Activer la rï¿½ception
 //}
+void UART1_Init(void) {
+    // Activer les horloges pour USART1 et GPIOA
+    RCC->APB2ENR |= RCC_APB2ENR_USART1EN | RCC_APB2ENR_IOPAEN;
 
+    // Configuration de PA9 (TX) en mode alternatif push-pull
+//    GPIOA->CRH &= ~GPIO_CRH_MODE9;
+//    GPIOA->CRH |= GPIO_CRH_MODE9_1;  
+//    GPIOA->CRH &= ~GPIO_CRH_CNF9;
+//    GPIOA->CRH |= GPIO_CRH_CNF9_1;
+
+	  MyGPIO_Struct_TypeDef tx;
+    // Configuration de PA9 comme TX (output push-pull)
+    tx.GPIO = GPIOA;
+    tx.GPIO_Pin = 9;
+    tx.GPIO_Conf = AltOut_Ppull;
+    MyGPIO_Init(&tx);
+
+//    // Configuration de PA10 (RX) en entrï¿½e flottante
+//    GPIOA->CRH &= ~GPIO_CRH_MODE10;
+//    GPIOA->CRH &= ~GPIO_CRH_CNF10;
+//    GPIOA->CRH |= GPIO_CRH_CNF10_0;
+	
+	  MyGPIO_Struct_TypeDef rx;
+    // Configuration de PA10 comme TX (output push-pull)
+    rx.GPIO = GPIOA;
+    rx.GPIO_Pin = 10;
+    rx.GPIO_Conf = In_Floating;
+    MyGPIO_Init(&rx);
+
+    // Configuration de l'USART1
+    USART1->CR1 |= USART_CR1_UE;           // Activer l'USART
+    USART1->CR1 &= ~USART_CR1_M;           // 8 bits de donnï¿½es
+    USART1->CR2 &= ~USART_CR2_STOP;        // 1 bit de stop
+    USART1->BRR = 0x1D4C;                  // Baud rate ï¿½ 9600 bauds (pour 72 MHz)
+
+    USART1->CR1 |= USART_CR1_TE | USART_CR1_RE;  // Activer transmission et rï¿½ception
+    USART1->CR1 |= USART_CR1_RXNEIE;       // Activer interruption RXNE
+    NVIC_EnableIRQ(USART1_IRQn);           // Activer interruption dans le NVIC
+}
 // Fonction pour recevoir un octet via UART1
 char UART1_Receive(void) {
-    while (!(USART1->SR & USART_SR_RXNE)); // Attendre que les données soient prêtes
-    return (char)(USART1->DR); // Lire la donnée reçue
+    while (!(USART1->SR & USART_SR_RXNE)); // Attendre que les donnï¿½es soient prï¿½tes
+    return (char)(USART1->DR); // Lire la donnï¿½e reï¿½ue
 }
 
 void UART1_SendChar(char c) {
-    while (!(USART1->SR & USART_SR_TXE));  // Attendre que le registre soit prêt
-    USART1->DR = c;                       // Envoyer le caractère
+    while (!(USART1->SR & USART_SR_TXE));  // Attendre que le registre soit prï¿½t
+    USART1->DR = c;                       // Envoyer le caractï¿½re
 }
 
 void UART1_SendString(const char *str) {
@@ -66,8 +74,14 @@ void UART1_SendString(const char *str) {
     }
 }
 
-void UART1_SendData(int8_t direction, uint8_t battery, int8_t roll_angle) {
+void UART1_SendData(int8_t direction, int8_t battery, int8_t roll_angle) {
     char buffer[32];
     snprintf(buffer, sizeof(buffer), "%d,%d,%d\n", direction, battery, roll_angle); //conversion de la valeur en string
+    UART1_SendString(buffer);
+}
+
+void UART1_SendDatatime(int8_t timeh, int8_t timem, int8_t times) {
+    char buffer[32];
+	snprintf(buffer, sizeof(buffer), "%d:%d:%d\n", timeh, timem, times); //conversion de la valeur en string
     UART1_SendString(buffer);
 }
