@@ -74,10 +74,15 @@ void UART1_SendString(const char *str) {
     }
 }
 
-void UART1_SendData(int8_t direction, int8_t battery, int8_t roll_angle) {
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle) {
     char buffer[32];
-    snprintf(buffer, sizeof(buffer), "%d,%d,%d\n", direction, battery, roll_angle); //conversion de la valeur en string
-    UART1_SendString(buffer);
+	  if(direction==1){
+		snprintf(buffer, sizeof(buffer), "%d:%d:%d hor,bat=%d,roll=%d\n", timeh, timem, times, battery, roll_angle); //conversion de la valeur en string
+		}
+		else{
+    snprintf(buffer, sizeof(buffer), "%d:%d:%d trig,bat=%d,roll=%d\n", timeh, timem, times, battery, roll_angle); //conversion de la valeur en string
+    }
+		UART1_SendString(buffer);
 }
 
 void UART1_SendDatatime(int8_t timeh, int8_t timem, int8_t times) {
@@ -85,3 +90,4 @@ void UART1_SendDatatime(int8_t timeh, int8_t timem, int8_t times) {
 	snprintf(buffer, sizeof(buffer), "%d:%d:%d\n", timeh, timem, times); //conversion de la valeur en string
     UART1_SendString(buffer);
 }
+

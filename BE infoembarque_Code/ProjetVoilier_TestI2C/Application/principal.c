@@ -34,7 +34,7 @@ int main(void)
     // Boucle principale
     while (1)
     {
-			
+			  DS1307_GetTime(I2C2,&MARC);
 			  int8_t timeh = MARC.hours;
 			  int8_t timem = MARC.minutes;
 			  int8_t times = MARC.seconds;
