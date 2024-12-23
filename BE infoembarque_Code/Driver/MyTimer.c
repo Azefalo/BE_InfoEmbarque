@@ -155,31 +155,7 @@ void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void
 
 void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) 
 { 
-//		if(Timer== TIM1)
-//		{
-//			RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
-//			TIM1->ARR=Timer->ARR;
-//			TIM1->PSC=Timer->PSC;
-//		}
-//			if(Timer== TIM2)
-//		{
-//			RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
-//			TIM2->ARR=Timer->ARR;
-//			TIM2->PSC=Timer->PSC;
-//		}
-//			if(Timer== TIM3)
-//		{
-//			RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
-//			TIM3->ARR=Timer->ARR;
-//			TIM3->PSC=Timer->PSC;
-//		}
-//			if(Timer== TIM4)
-//		{
-//			RCC->APB1ENR |= RCC_APB1ENR_TIM4EN;
-//			TIM4->ARR=Timer->ARR;
-//			TIM4->PSC=Timer->PSC;
-//		}
-//		
+	
 	  if(Channel==1){
 			Timer->CCMR1 &= ~TIM_CCMR1_OC1M;          // Effacer les bits du mode de comparaison
 			Timer->CCMR1 |= (0x6 << 4);  // Régler le mode PWM 1 (0x6)
@@ -209,9 +185,9 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel )
 
 
 void MyTimer_SetDutyCycle( TIM_TypeDef * Timer , char Channel ,int dutycycle) {
-	int pulse=dutycycle*(Timer->ARR+1)/100;
+	int pulse=dutycycle*(Timer->ARR+1)/100; // définition de la largeur d'impulsion 
   if(Channel==1){
-		Timer->CCR1=pulse;
+		Timer->CCR1=pulse; // mise à jour du signal PWM
 	}
 	if(Channel==2){
 		Timer->CCR2=pulse;

@@ -3,8 +3,7 @@
 
 int8_t batterylevel = 0;
 
-
-void Battery_init(){
+void Battery_init(){ //initialisation des paramètres de lecture du niveau de batterie 
 	
 	MyGPIO_Struct_TypeDef battery;
 	battery.GPIO = GPIOA;
@@ -15,21 +14,21 @@ void Battery_init(){
 	convert_cont();//convertion continu
 }
 
-void RTC_init(DS1307_TimeDate *timeDate){
-	    //DS1307_TimeDate MARC =(*timeDate); // pour set le temps
-	   // Définition des valeurs
-//    MARC.seconds = 45;       // 30 secondes
-//    MARC.minutes = 43;       // 45 minutes
-//    MARC.hours = 14;         // 14 heures (2:00 PM en format 24h)
+void RTC_init(DS1307_TimeDate *timeDate){ //initialisation du RTC avec la fonction de mise à jour du temps au cas ou 
+//	  DS1307_TimeDate MARC =(*timeDate); // pour mettre à jour le temps
+//	   // Définition des valeurs
+//    MARC.seconds = 25;       // 30 secondes
+//    MARC.minutes = 29;       // 45 minutes
+//    MARC.hours = 15;         // 14 heures (2:00 PM en format 24h)
 //    MARC.day_of_week = 4;    // Jeudi (1 = Dimanche, 7 = Samedi)
 //    MARC.date = 12;          // 12 du mois
 //    MARC.month = 12;         // Décembre 
 //    MARC.year = 24; 
-      DS1307_Init(I2C2);
+    DS1307_Init(I2C2);
 //	  DS1307_SetTime(I2C2,&MARC);
 }
 
-void Roulis_init(){
+void Roulis_init(){ // initialisation des paramètres pour communiquer via SPI et déterminer les coordonnées qui permettent de calculer l'angle de roulis 
 		
 		MySPI_Init(SPI2);
 		MySPI_Clear_NSS();
@@ -46,7 +45,7 @@ void Roulis_init(){
 		MySPI_Set_NSS();
 }
 
-void Index_init(MyGPIO_Struct_TypeDef * index){
+void Index_init(MyGPIO_Struct_TypeDef * index){ //initialisation des paramètres de lecture du niveau de l'index z de l'encodeur 
 	   
 	  // Initialisation de la LED sur PA5 (output push-pull)
     index->GPIO = GPIOA;
@@ -64,7 +63,7 @@ void Index_test(MyGPIO_Struct_TypeDef * index){
 		}
 }
 
-void Servo_init(MyTimer_Struct_TypeDef * tim_SV){
+void Servo_init(MyTimer_Struct_TypeDef * tim_SV){ //initialisation de l'objet servomoteur 
 		MyGPIO_Struct_TypeDef Consigne_S;//On met notre consigne du servo moteur sur B0 vu quon utilise TIM3
     Consigne_S.GPIO = GPIOB;
     Consigne_S.GPIO_Pin = 0;
@@ -80,7 +79,7 @@ void Servo_init(MyTimer_Struct_TypeDef * tim_SV){
 		MyTimer_Base_Start(TIM3);
 }
 
-float Demande_message(){
+float Demande_message(){ //récupération des coordonées et calcul l'angle de roulis
 	  
 	  unsigned char Demande = 0xF2;
 	  unsigned char Message[6];
@@ -101,7 +100,7 @@ float Demande_message(){
 		return 360*atanf((float)z/(float)y)/(2*3.1415)+90;
 }
 
-void Servo_update(MyTimer_Struct_TypeDef * tim_SV, float angle_roulis) {
+void Servo_update(MyTimer_Struct_TypeDef * tim_SV, float angle_roulis) { // définition de l'angle de rotation du servomoteur à partir de l'angle de la girouette (lié à l'encodeur)
 	  // Lire la position de l'encodeur
     int encoder_position = MyTimer_Encoder_Read(TIM2);
 		int alpha = (encoder_position/4); // angle du servomoteur
@@ -124,7 +123,7 @@ void Servo_update(MyTimer_Struct_TypeDef * tim_SV, float angle_roulis) {
 		MyTimer_SetDutyCycle(tim_SV->Timer, 3, (Teta/36)+5);
 }
 
-void Send_Data(DS1307_TimeDate *MARC, float angle_roulis){
+void Send_Data(DS1307_TimeDate *MARC, float angle_roulis){ //  permet d'envoyer les données heure,direction,niveau de batterie,angle de roulis
 		DS1307_GetTime(I2C2,MARC);
 		int8_t timeh = MARC->hours;
 		int8_t timem = MARC->minutes;

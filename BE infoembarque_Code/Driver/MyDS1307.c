@@ -11,14 +11,14 @@ void DS1307_Init(I2C_TypeDef *I2Cx) {
     MyI2C_PutString(I2Cx, DS1307_REG_CONTROL, &controlData);
 }
 
-static uint8_t BCD_to_Decimal(uint8_t bcd) {
+static uint8_t BCD_to_Decimal(uint8_t bcd) { //conversion BCD vers décimal pour récupérer les données du RTC et les afficher par la suite(get time)
     return ((bcd >> 4) * 10) + (bcd & 0x0F);
 }
-static uint8_t Decimal_to_BCD(uint8_t decimal) {
+static uint8_t Decimal_to_BCD(uint8_t decimal) { //conversion décimal vers BCD  pour envoyer des données vers le RTC (set time)
     return ((decimal / 10) << 4) | (decimal % 10);
 }
 
-void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
+void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) { // régler le temps perçu par le RTC
     uint8_t data[7];
 
     // Convertit les valeurs décimales en BCD
@@ -35,7 +35,7 @@ void DS1307_SetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
     MyI2C_PutString(I2Cx, DS1307_REG_SECONDS, &timeData);  // Commence l'écriture à partir de DS1307_REG_SECONDS (0x00)
 }
 
-void DS1307_GetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) {
+void DS1307_GetTime(I2C_TypeDef *I2Cx, DS1307_TimeDate *timeDate) { //récupérer le temps vu par le RTC
     uint8_t data[7];
 
     // Lit les 7 registres du DS1307 (de DS1307_REG_SECONDS à DS1307_REG_YEAR)
