@@ -1,123 +1,178 @@
 Dependencies for Project 'ProjetVide', Target 'Reel': (DO NOT MODIFY !)
-CompilerVersion: 6220000::V6.22::ARMCLANG
-F (.\Application\principal.c)(0x675B0E04)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/principal.o -MMD)
-I (..\Driver\myApplication.h)(0x675B0D94)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\Application\principal.c)(0x675B135B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/principal.o -MD)
+I (..\Driver\myApplication.h)(0x675B135B)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
 I (..\Driver\MyI2C.h)(0x634E5A47)
-I (..\Driver\DS1307.h)(0x6752C3CC)
-I (..\Driver\MyUSART.h)(0x675B10C3)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (..\Driver\MyADC.h)(0x673BC230)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (..\Driver\MyPLATEAU.h)(0x67498E96)
-I (..\Driver\MyEncoder.h)(0x673BC230)
-I (..\Driver\MySPI.h)(0x67499960)
-F (.\GPIO.c)(0x67307A09)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/gpio.o -MMD)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-F (.\TIMER.c)(0x67307A0A)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/timer.o -MMD)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (..\Driver\MyTimer.h)(0x673BC230)
-F (.\ADC.c)(0x67307A09)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/adc.o -MMD)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (..\Driver\MyADC.h)(0x673BC230)
-F (..\Driver\DS1307.h)(0x6752C3CC)()
-F (..\Driver\Lib_Com_Periph_2022.lib)(0x67499960)()
-F (..\Driver\MyADC.c)(0x673DE269)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myadc.o -MMD)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (..\Driver\MyADC.h)(0x673BC230)
-F (..\Driver\MyADC.h)(0x673BC230)()
-F (..\Driver\MyDS1307.c)(0x675AF03C)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myds1307.o -MMD)
-I (..\Driver\DS1307.h)(0x6752C3CC)
+I (..\Driver\DS1307.h)(0x67540CA0)
+I (..\Driver\MyUSART.h)(0x675AFBCC)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (..\Driver\MyADC.h)(0x673DA4BB)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (..\Driver\MyPLATEAU.h)(0x6749A1AF)
+I (..\Driver\MyEncoder.h)(0x673DA4BB)
+I (..\Driver\MySPI.h)(0x634E5AE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+F (.\GPIO.c)(0x675B135B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/gpio.o -MD)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+F (.\TIMER.c)(0x675B135B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/timer.o -MD)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+F (.\ADC.c)(0x675B135B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/adc.o -MD)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (..\Driver\MyADC.h)(0x673DA4BB)
+F (..\Driver\DS1307.h)(0x67540CA0)()
+F (..\Driver\Lib_Com_Periph_2022.lib)(0x634E68C6)()
+F (..\Driver\MyADC.c)(0x673DA4BB)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/myadc.o -MD)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (..\Driver\MyADC.h)(0x673DA4BB)
+F (..\Driver\MyADC.h)(0x673DA4BB)()
+F (..\Driver\MyDS1307.c)(0x675AFBCC)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/myds1307.o -MD)
+I (..\Driver\DS1307.h)(0x67540CA0)
 I (..\Driver\MyI2C.h)(0x634E5A47)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-F (..\Driver\MyEncoder.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myencoder.o -MMD)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (..\Driver\MyEncoder.h)(0x673BC230)
-F (..\Driver\MyEncoder.h)(0x673BC230)()
-F (..\Driver\MyGPIO.c)(0x673BC230)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/mygpio.o -MMD)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-F (..\Driver\MyGPIO.h)(0x673DFDC3)()
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+F (..\Driver\MyEncoder.c)(0x673DA4BB)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/myencoder.o -MD)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (..\Driver\MyEncoder.h)(0x673DA4BB)
+F (..\Driver\MyEncoder.h)(0x673DA4BB)()
+F (..\Driver\MyGPIO.c)(0x673DA4BB)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mygpio.o -MD)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+F (..\Driver\MyGPIO.h)(0x673DA4BB)()
 F (..\Driver\MyI2C.h)(0x634E5A47)()
-F (..\Driver\MyPLATEAU.c)(0x6752A863)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myplateau.o -MMD)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyPLATEAU.h)(0x67498E96)
-I (..\Driver\MyUSART.h)(0x675B10C3)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-F (..\Driver\MyPLATEAU.h)(0x67498E96)()
-F (..\Driver\MySPI.h)(0x67499960)()
-F (..\Driver\MyTimer.c)(0x674A14C5)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/mytimer.o -MMD)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-F (..\Driver\MyTimer.h)(0x673BC230)()
-F (..\Driver\MyUSART.c)(0x675B10BD)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myusart.o -MMD)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
-I (..\Driver\MyUSART.h)(0x675B10C3)
-F (..\Driver\MyUSART.h)(0x675B10C3)()
-F (..\Driver\myApplication.c)(0x675B1186)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/myapplication.o -MMD)
-I (..\Driver\myApplication.h)(0x675B0D94)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+F (..\Driver\MyPLATEAU.c)(0x6752B175)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/myplateau.o -MD)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyPLATEAU.h)(0x6749A1AF)
+I (..\Driver\MyUSART.h)(0x675AFBCC)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+F (..\Driver\MyPLATEAU.h)(0x6749A1AF)()
+F (..\Driver\MySPI.h)(0x634E5AE0)()
+F (..\Driver\MyTimer.c)(0x6752A3B5)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mytimer.o -MD)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+F (..\Driver\MyTimer.h)(0x673DA4BB)()
+F (..\Driver\MyUSART.c)(0x675AFBCC)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/myusart.o -MD)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
+I (..\Driver\MyUSART.h)(0x675AFBCC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+F (..\Driver\MyUSART.h)(0x675AFBCC)()
+F (..\Driver\myApplication.c)(0x675B135B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/myapplication.o -MD)
+I (..\Driver\myApplication.h)(0x675B135B)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)
 I (..\Driver\MyI2C.h)(0x634E5A47)
-I (..\Driver\DS1307.h)(0x6752C3CC)
-I (..\Driver\MyUSART.h)(0x675B10C3)
-I (..\Driver\MyGPIO.h)(0x673DFDC3)
-I (..\Driver\MyADC.h)(0x673BC230)
-I (..\Driver\MyTimer.h)(0x673BC230)
-I (..\Driver\MyPLATEAU.h)(0x67498E96)
-I (..\Driver\MyEncoder.h)(0x673BC230)
-I (..\Driver\MySPI.h)(0x67499960)
-F (..\Driver\myApplication.h)(0x675B0D94)()
-F (RTE/Device/STM32F103RB/RTE_Device.h)(0x67307A0B)()
-F (RTE/Device/STM32F103RB/startup_stm32f10x_md.s)(0x67307A0B)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
-F (RTE/Device/STM32F103RB/system_stm32f10x.c)(0x67307A0B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MMD)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x67307A3F)
-I (RTE\_Reel\RTE_Components.h)(0x67499991)
-I (C:\Users\logar\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
-I (C:\Users\logar\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x67307A3F)
+I (..\Driver\DS1307.h)(0x67540CA0)
+I (..\Driver\MyUSART.h)(0x675AFBCC)
+I (..\Driver\MyGPIO.h)(0x673DA4BB)
+I (..\Driver\MyADC.h)(0x673DA4BB)
+I (..\Driver\MyTimer.h)(0x673DA4BB)
+I (..\Driver\MyPLATEAU.h)(0x6749A1AF)
+I (..\Driver\MyEncoder.h)(0x673DA4BB)
+I (..\Driver\MySPI.h)(0x634E5AE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+F (..\Driver\myApplication.h)(0x675B135B)()
+F (RTE/Device/STM32F103RB/RTE_Device.h)(0x675B135B)()
+F (RTE/Device/STM32F103RB/startup_stm32f10x_md.s)(0x675B135B)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
+F (RTE/Device/STM32F103RB/system_stm32f10x.c)(0x675B135B)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Driver-I./RTE/Device/STM32F103RB-I./RTE/_Reel-IC:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61ADCDBE)
+I (RTE\_Reel\RTE_Components.h)(0x676429DB)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F9F3E)
+I (C:\Users\tutro\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61ADCDBE)

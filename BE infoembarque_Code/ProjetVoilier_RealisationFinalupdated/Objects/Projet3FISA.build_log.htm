@@ -3,96 +3,2429 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.41.0.0
-Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Pierre Senghor, INSA, LIC=----
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Marc Sanchez, INSA, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.41.0.0
-Toolchain Path:  C:\Users\logar\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.22
-Assembler:       Armasm.exe V6.22
-Linker/Locator:  ArmLink.exe V6.22
-Library Manager: ArmAr.exe V6.22
-Hex Converter:   FromElf.exe V6.22
-CPU DLL:         SARMCM3.DLL V5.41.0.0
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
 Dialog DLL:      DARMSTM.DLL V1.69.1.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TARMSTM.DLL V1.67.1.0
  
 <h2>Project:</h2>
-C:\Users\logar\Documents\GitHub\BE_InfoEmbarque\BE infoembarque_Code\ProjetVoilier_RealisationFinalupdated\ProjetVide.uvprojx
-Project File Date:  12/12/2024
+C:\Users\tutro\Desktop\Be_Info_git\BE_InfoEmbarque\BE infoembarque_Code\ProjetVoilier_RealisationFinalupdated\ProjetVide.uvprojx
+Project File Date:  12/19/2024
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.22', folder: 'C:\Users\logar\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Reel'
+GPIO.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+GPIO.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+GPIO.c(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        // Lire l'<E9>tat du bouton poussoir (PC13)
+                    ^
+GPIO.c(27): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        if ((GPIOC->IDR & (1 << 12)))  // Si bouton est press<E9> (PC13 est 0)
+                                                               ^
+GPIO.c(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//            GPIOA->BRR = (1 << 6);      // <C9>teindre la LED (PA5)
+                                             ^
+GPIO.c(2): warning: In file included from...
+../Driver\MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+GPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Lire l'<E9>tat du bouton poussoir et allumer/<E9>teindre la LED en cons<E9>quence
+                  ^
+GPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Lire l'<E9>tat du bouton poussoir et allumer/<E9>teindre la LED en cons<E9>quence
+                                                        ^
+GPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Lire l'<E9>tat du bouton poussoir et allumer/<E9>teindre la LED en cons<E9>quence
+                                                                                  ^
+GPIO.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+            MyGPIO_Reset(led.GPIO, led.GPIO_Pin);  // <C9>teindre la LED
+                                                      ^
+GPIO.c(60): warning: no newline at end of file [-Wnewline-eof]
+                }    
+                     ^
+GPIO.c(4): warning: no previous prototype for function 'GPIO' [-Wmissing-prototypes]
+int GPIO(void)
+    ^
+GPIO.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int GPIO(void)
+^
+static 
+24 warnings generated.
 compiling GPIO.c...
-compiling MyTimer.c...
-compiling MyPLATEAU.c...
-compiling MyGPIO.c...
+ADC.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+ADC.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+ADC.c(3): warning: In file included from...
+../Driver\MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver\MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+ADC.c(4): warning: In file included from...
+../Driver\MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver\MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver\MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+ADC.c(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        RCC->APB2ENR|=RCC_APB2ENR_ADC1EN; //d<E9>finir une horloge pour l'adc1
+                                               ^
+ADC.c(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        ADC1->SQR1&=~(0xF<<20); // mettre L <E0> 0 pour ne faire qu'une seule conversion
+                                              ^
+ADC.c(2): warning: In file included from...
+../Driver\MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+ADC.c(41): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                         res=(ADC1->DR & ~((0x0F) << 12))*100/(4095);
+                                       ~ ^~~~~~~~~~~~~~~
+ADC.c(47): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+ADC.c(29): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+          MyTimer_Struct_TypeDef tim;
+                                 ^
+ADC.c(6): warning: no previous prototype for function 'ADC' [-Wmissing-prototypes]
+int ADC(void)
+    ^
+ADC.c(6): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int ADC(void)
+^
+static 
+28 warnings generated.
 compiling ADC.c...
-compiling MyUSART.c...
+../Driver/MyADC.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyADC.c(2): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyADC.c(3): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/MyADC.c(4): warning: In file included from...
+../Driver/MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver/MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver/MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+../Driver/MyADC.c(7): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          RCC->APB2ENR|=RCC_APB2ENR_ADC1EN; //d<E9>finir une horloge pour l'adc1
+                                               ^
+../Driver/MyADC.c(10): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          ADC1->SQR1&=~(0xF<<20); // mettre L <E0> 0 pour ne faire qu'une seule conversion
+                                              ^
+../Driver/MyADC.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          ADC1->SQR1&=~(0xF<<20); // mettre L <E0> 0 pour ne faire qu'une seule conversion
+                    ~~^~~~~~~~~~
+../Driver/MyADC.c(11): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          ADC1->SQR3|=canal; //choix du canal 8 pour la conversion 
+                    ~~^~~~~
+../Driver/MyADC.c(16): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single(){
+                  ^
+                   void
+../Driver/MyADC.c(19): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ADC1->SR &= ~ADC_SR_EOC; // validation de la conversion
+             ~~ ^~~~~~~~~~~
+../Driver/MyADC.c(20): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+    ~~~~~~ ~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Driver/MyADC.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+                    ~ ^~~~~~~~~~~~~~~
+../Driver/MyADC.c(16): warning: no previous prototype for function 'convert_single' [-Wmissing-prototypes]
+int convert_single(){
+    ^
+../Driver/MyADC.h(4): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int convert_single();
+    ^
+                   void
+../Driver/MyADC.c(23): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont(){
+                ^
+                 void
+../Driver/MyADC.c(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    ADC1->SR &= ~ADC_SR_EOC; // validation de la conversion
+             ~~ ^~~~~~~~~~~
+../Driver/MyADC.c(28): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+    ~~~~~~ ~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Driver/MyADC.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ADC1->DR & ~((0x0F) << 12); // retour de la conversion
+                    ~ ^~~~~~~~~~~~~~~
+../Driver/MyADC.c(29): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+../Driver/MyADC.c(23): warning: no previous prototype for function 'convert_cont' [-Wmissing-prototypes]
+int convert_cont(){
+    ^
+../Driver/MyADC.h(5): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int convert_cont();
+    ^
+                 void
+36 warnings generated.
 compiling MyADC.c...
-compiling MyEncoder.c...
-compiling MyDS1307.c...
+TIMER.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+TIMER.c(2): warning: In file included from...
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver\MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver\MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver\MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver\MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver\MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver\MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver\MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver\MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+TIMER.c(3): warning: In file included from...
+../Driver\MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver\MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver\MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+TIMER.c(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Boucle vide pour cr<E9>er un d<E9>lai
+                              ^
+TIMER.c(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Boucle vide pour cr<E9>er un d<E9>lai
+                                         ^
+TIMER.c(17): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+  void delay(volatile uint32_t delay_time) {
+       ^
+TIMER.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  void delay(volatile uint32_t delay_time) {
+  ^
+  static 
+TIMER.c(29): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    TIM2->PSC = 35999;  // Pr<E9>scaler
+                               ^
+TIMER.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    // D<E9>marrage du Timer
+          ^
+TIMER.c(2): warning: In file included from...
+../Driver\MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+TIMER.c(64): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    //Configuration de l<92>interruption sur le coeur
+                          ^
+TIMER.c(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    NVIC->IPR[28] |= (7 << 4);// interruption mis en priorit<E9> 7
+                                                              ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                          ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                                              ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                                                               ^
+TIMER.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    //NVIC_SetPriority(TIM3_IRQn, 7); // D<E9>finir la priorit<E9> (1 est plus <E9>lev<E9> que 0)
+                                                                                      ^
+TIMER.c(96): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+TIMER.c(55): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+          MyTimer_Struct_TypeDef tim;
+                                 ^
+TIMER.c(22): warning: no previous prototype for function 'Timer' [-Wmissing-prototypes]
+int Timer(void)
+    ^
+TIMER.c(22): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int Timer(void)
+^
+static 
+33 warnings generated.
 compiling TIMER.c...
+../Driver/MyGPIO.c(1): warning: In file included from...
+../Driver/MyGPIO.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyGPIO.c(1): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyGPIO.c(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIOStructPtr->GPIO_Pin < 8) { // Broche de 0 <E0> 7 (config dans CRL)
+                                                      ^
+../Driver/MyGPIO.c(16): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRL &= ~(0xF << (GPIOStructPtr->GPIO_Pin * 4));  // Effacer la configuration actuelle
+                                 ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(17): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRL |= (GPIOStructPtr->GPIO_Conf << (GPIOStructPtr->GPIO_Pin * 4));  // Configurer
+                                 ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                                GPIOStructPtr->GPIO->CRL |= (0x08 << (GPIOStructPtr->GPIO_Pin * 4));
+                                                                         ~~  ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    } else {  // Broche de 8 <E0> 15 (config dans CRH)
+                             ^
+../Driver/MyGPIO.c(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRH &= ~(0xF << ((GPIOStructPtr->GPIO_Pin - 8) * 4));  // Effacer la configuration actuelle
+                                 ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOStructPtr->GPIO->CRH |= (GPIOStructPtr->GPIO_Conf << ((GPIOStructPtr->GPIO_Pin - 8) * 4));  // Configurer
+                                 ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/MyGPIO.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Lecture de l'<E9>tat d'une broche GPIO
+                ^
+../Driver/MyGPIO.c(1): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../Driver/MyGPIO.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIO->IDR & (1 << GPIO_Pin)) { // V<E9>rifier si la broche est <E0> l'<E9>tat haut
+                                           ^
+../Driver/MyGPIO.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIO->IDR & (1 << GPIO_Pin)) { // V<E9>rifier si la broche est <E0> l'<E9>tat haut
+                                                                       ^
+../Driver/MyGPIO.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (GPIO->IDR & (1 << GPIO_Pin)) { // V<E9>rifier si la broche est <E0> l'<E9>tat haut
+                                                                              ^
+../Driver/MyGPIO.c(41): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Activer une broche GPIO (mettre <E0> 1)
+                                   ^
+../Driver/MyGPIO.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BSRR = (1 << GPIO_Pin);  // R<E9>gistre BSRR pour mettre <E0> 1
+                                       ^
+../Driver/MyGPIO.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BSRR = (1 << GPIO_Pin);  // R<E9>gistre BSRR pour mettre <E0> 1
+                                                                   ^
+../Driver/MyGPIO.c(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>sactiver une broche GPIO (mettre <E0> 0)
+    ^
+../Driver/MyGPIO.c(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>sactiver une broche GPIO (mettre <E0> 0)
+                                         ^
+../Driver/MyGPIO.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BRR = (1 << GPIO_Pin);  // R<E9>gistre BRR pour mettre <E0> 0
+                                      ^
+../Driver/MyGPIO.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->BRR = (1 << GPIO_Pin);  // R<E9>gistre BRR pour mettre <E0> 0
+                                                                 ^
+../Driver/MyGPIO.c(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Inverser l'<E9>tat d'une broche GPIO
+              ^
+../Driver/MyGPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->ODR ^= (1 << GPIO_Pin);  // XOR sur le r<E9>gistre ODR pour inverser l'<E9>tat
+                                                  ^
+../Driver/MyGPIO.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO->ODR ^= (1 << GPIO_Pin);  // XOR sur le r<E9>gistre ODR pour inverser l'<E9>tat
+                                                                                 ^
+../Driver/MyGPIO.c(54): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+37 warnings generated.
+compiling MyGPIO.c...
+../Driver/MyUSART.c(1): warning: In file included from...
+../Driver/MyGPIO.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyUSART.c(1): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyUSART.c(2): warning: In file included from...
+../Driver/MyUSART.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle);
+                                                                                                                  ^
+../Driver/MyUSART.c(1): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../Driver/MyUSART.c(31): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+          MyGPIO_Struct_TypeDef tx;
+                                ^
+../Driver/MyUSART.c(66): warning: no previous prototype for function 'UART1_SendChar' [-Wmissing-prototypes]
+void UART1_SendChar(char c) {
+     ^
+../Driver/MyUSART.c(66): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART1_SendChar(char c) {
+^
+static 
+../Driver/MyUSART.c(71): warning: no previous prototype for function 'UART1_SendString' [-Wmissing-prototypes]
+void UART1_SendString(const char *str) {
+     ^
+../Driver/MyUSART.c(71): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART1_SendString(const char *str) {
+^
+static 
+19 warnings generated.
+compiling MyUSART.c...
+../Driver/MyEncoder.c(1): warning: In file included from...
+../Driver/MyGPIO.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyEncoder.c(1): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyEncoder.c(2): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/MyEncoder.c(3): warning: In file included from...
+../Driver/MyEncoder.h(6): warning: no newline at end of file [-Wnewline-eof]
+void Encoder_Timer_Init(void);
+                              ^
+../Driver/MyEncoder.c(6): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define PULSES_PER_ROTATION 1440  // R<E9>solution du codeur (360 impulsions par rotation)
+                                      ^
+../Driver/MyEncoder.c(9): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Initialisation des GPIOs pour le codeur incr<E9>mental
+                                               ^
+../Driver/MyEncoder.c(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Configurer la broche A du codeur en entr<E9>e capture (PA0)
+                                               ^
+../Driver/MyEncoder.c(1): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../Driver/MyEncoder.c(21): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Configurer la broche B du codeur en entr<E9>e capture (PA1)
+                                               ^
+../Driver/MyEncoder.c(28): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Initialisation des Timers en mode capture pour le codeur incr<E9>mental
+                                                                ^
+../Driver/MyEncoder.c(34): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TimerConfigA.PSC = 0; // Pas de pr<E9>division
+                                      ^
+../Driver/MyEncoder.c(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIMER_ENCODER->CCER &=~ (TIM_CCER_CC1P| TIM_CCER_CC2P);      // D<E9>tection des fronts montants et descendants pour les deux canaux
+                                                                     ^
+../Driver/MyEncoder.c(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // 5. Initialiser le compteur <E0> 0
+                                  ^
+../Driver/MyEncoder.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // 6. D<E9>marrer le Timer
+           ^
+../Driver/MyEncoder.c(55): warning: implicit conversion changes signedness: 'volatile uint16_t' (aka 'volatile unsigned short') to 'int16_t' (aka 'short') [-Wsign-conversion]
+    return Timer->CNT;
+    ~~~~~~ ~~~~~~~^~~
+../Driver/MyEncoder.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//remise <E0> z<E9>ro du compteur
+         ^
+../Driver/MyEncoder.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//remise <E0> z<E9>ro du compteur
+               ^
+../Driver/MyEncoder.c(60): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+33 warnings generated.
+compiling MyEncoder.c...
+../Driver/MyPLATEAU.c(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyPLATEAU.c(2): warning: In file included from...
+../Driver/MyPLATEAU.h(3): warning: In file included from...
+../Driver/MyUSART.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle);
+                                                                                                                  ^
+../Driver/MyPLATEAU.c(2): warning: In file included from...
+../Driver/MyPLATEAU.h(4): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/MyPLATEAU.c(2): warning: In file included from...
+../Driver/MyPLATEAU.h(5): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyPLATEAU.c(2): warning: In file included from...
+../Driver/MyPLATEAU.h(9): warning: no newline at end of file [-Wnewline-eof]
+void updateBoatDirectionAndSpeed(uint8_t receivedData);
+                                                       ^
+../Driver/MyPLATEAU.c(9): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Initialisation du GPIO pour d<E9>finir le sens du plateau 
+                                    ^
+../Driver/MyPLATEAU.c(2): warning: In file included from...
+../Driver/MyPLATEAU.h(5): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../Driver/MyPLATEAU.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          // Calcul de la p<E9>riode pour atteindre une fr<E9>quence de 20 kHz
+                           ^
+../Driver/MyPLATEAU.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          // Calcul de la p<E9>riode pour atteindre une fr<E9>quence de 20 kHz
+                                                          ^
+../Driver/MyPLATEAU.c(17): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    MyGPIO_Struct_TypeDef PWMPlateau;
+                          ^
+../Driver/MyPLATEAU.c(35): warning: no previous extern declaration for non-static variable 'receivedData' [-Wmissing-variable-declarations]
+volatile int8_t receivedData = 0;  // Variable pour stocker la direction re<E7>ue
+                ^
+../Driver/MyPLATEAU.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int8_t receivedData = 0;  // Variable pour stocker la direction re<E7>ue
+         ^
+../Driver/MyPLATEAU.c(35): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+volatile int8_t receivedData = 0;  // Variable pour stocker la direction re<E7>ue
+                                                                           ^
+../Driver/MyPLATEAU.c(36): warning: no previous extern declaration for non-static variable 'vitesse' [-Wmissing-variable-declarations]
+volatile int vitesse = 0;   // Vitesse du bateau (0 <E0> 100)
+             ^
+../Driver/MyPLATEAU.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int vitesse = 0;   // Vitesse du bateau (0 <E0> 100)
+         ^
+../Driver/MyPLATEAU.c(36): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+volatile int vitesse = 0;   // Vitesse du bateau (0 <E0> 100)
+                                                    ^
+../Driver/MyPLATEAU.c(40): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Fonction pour d<E9>finir le sens et la vitesse du bateau
+                  ^
+../Driver/MyPLATEAU.c(41): warning: declaration shadows a variable in the global scope [-Wshadow]
+void updateBoatDirectionAndSpeed(uint8_t receivedData) {
+                                         ^
+../Driver/MyPLATEAU.c(35): note: previous declaration is here
+volatile int8_t receivedData = 0;  // Variable pour stocker la direction re<E7>ue
+                ^
+../Driver/MyPLATEAU.c(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    vitesse = 0; // Arr<EA>t
+                       ^
+../Driver/MyPLATEAU.c(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Fonction d'interruption pour la r<E9>ception de donn<E9>es
+                                    ^
+../Driver/MyPLATEAU.c(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Fonction d'interruption pour la r<E9>ception de donn<E9>es
+                                                       ^
+../Driver/MyPLATEAU.c(60): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (USART1->SR & USART_SR_RXNE) {         // V<E9>rifier si le registre de r<E9>ception est pr<EA>t
+                                                  ^
+../Driver/MyPLATEAU.c(60): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (USART1->SR & USART_SR_RXNE) {         // V<E9>rifier si le registre de r<E9>ception est pr<EA>t
+                                                                                ^
+../Driver/MyPLATEAU.c(60): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if (USART1->SR & USART_SR_RXNE) {         // V<E9>rifier si le registre de r<E9>ception est pr<EA>t
+                                                                                                  ^
+../Driver/MyPLATEAU.c(61): warning: declaration shadows a variable in the global scope [-Wshadow]
+        uint8_t receivedData = (int8_t)USART1->DR;   // Lire la donn<E9>e brute re<E7>ue (0-255)
+                ^
+../Driver/MyPLATEAU.c(35): note: previous declaration is here
+volatile int8_t receivedData = 0;  // Variable pour stocker la direction re<E7>ue
+                ^
+../Driver/MyPLATEAU.c(61): warning: implicit conversion changes signedness: 'int8_t' (aka 'signed char') to 'uint8_t' (aka 'unsigned char') [-Wsign-conversion]
+        uint8_t receivedData = (int8_t)USART1->DR;   // Lire la donn<E9>e brute re<E7>ue (0-255)
+                ~~~~~~~~~~~~   ^~~~~~~~~~~~~~~~~~
+../Driver/MyPLATEAU.c(61): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        uint8_t receivedData = (int8_t)USART1->DR;   // Lire la donn<E9>e brute re<E7>ue (0-255)
+                                                                    ^
+../Driver/MyPLATEAU.c(61): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        uint8_t receivedData = (int8_t)USART1->DR;   // Lire la donn<E9>e brute re<E7>ue (0-255)
+                                                                                  ^
+../Driver/MyPLATEAU.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         updateBoatDirectionAndSpeed(receivedData);  // Mettre <E0> jour sens et vitesse
+                                                               ^
+../Driver/MyPLATEAU.c(67): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//volatile int8_t received_direction = 0;  // Variable pour stocker la direction re<E7>ue
+                                                                                   ^
+../Driver/MyPLATEAU.c(69): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//// Fonction d'interruption pour la r<E9>ception de donn<E9>es
+                                      ^
+../Driver/MyPLATEAU.c(69): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//// Fonction d'interruption pour la r<E9>ception de donn<E9>es
+                                                         ^
+../Driver/MyPLATEAU.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    if (USART1->SR & USART_SR_RXNE) {     // V<E9>rifier si le registre de r<E9>ception est pr<EA>t
+                                                ^
+../Driver/MyPLATEAU.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    if (USART1->SR & USART_SR_RXNE) {     // V<E9>rifier si le registre de r<E9>ception est pr<EA>t
+                                                                              ^
+../Driver/MyPLATEAU.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    if (USART1->SR & USART_SR_RXNE) {     // V<E9>rifier si le registre de r<E9>ception est pr<EA>t
+                                                                                                ^
+../Driver/MyPLATEAU.c(72): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        received_direction = (int8_t)USART1->DR;  // Lire la direction re<E7>ue depuis la t<E9>l<E9>commande
+                                                                           ^
+../Driver/MyPLATEAU.c(72): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        received_direction = (int8_t)USART1->DR;  // Lire la direction re<E7>ue depuis la t<E9>l<E9>commande
+                                                                                             ^
+../Driver/MyPLATEAU.c(72): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        received_direction = (int8_t)USART1->DR;  // Lire la direction re<E7>ue depuis la t<E9>l<E9>commande
+                                                                                                  ^
+../Driver/MyPLATEAU.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        MyGPIO_Set(GPIOB, 8);   // R<E9>gler le sens <E0> 1
+                                      ^
+../Driver/MyPLATEAU.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        MyGPIO_Set(GPIOB, 8);   // R<E9>gler le sens <E0> 1
+                                                       ^
+../Driver/MyPLATEAU.c(81): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        MyGPIO_Reset(GPIOB, 8); // R<E9>gler le sens <E0> 0
+                                      ^
+../Driver/MyPLATEAU.c(81): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//        MyGPIO_Reset(GPIOB, 8); // R<E9>gler le sens <E0> 0
+                                                       ^
+../Driver/MyPLATEAU.c(84): warning: no newline at end of file [-Wnewline-eof]
+//}
+   ^
+../Driver/MyPLATEAU.c(59): warning: no previous prototype for function 'USART1_IRQHandler' [-Wmissing-prototypes]
+void USART1_IRQHandler(void) {
+     ^
+../Driver/MyPLATEAU.c(59): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART1_IRQHandler(void) {
+^
+static 
+57 warnings generated.
+compiling MyPLATEAU.c...
+../Driver/MyTimer.c(1): warning: In file included from...
+../Driver/MyTimer.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyTimer.c(1): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/MyTimer.c(2): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/MyTimer.c(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(34): warning: no previous prototype for function 'TIM1_UP_IRQHandler' [-Wmissing-prototypes]
+void TIM1_UP_IRQHandler(void) { //programme d'interruption pour le timer2
+     ^
+../Driver/MyTimer.c(34): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM1_UP_IRQHandler(void) { //programme d'interruption pour le timer2
+^
+static 
+../Driver/MyTimer.c(62): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(50): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void) { //programme d'interruption pour le timer2
+     ^
+../Driver/MyTimer.c(50): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void) { //programme d'interruption pour le timer2
+^
+static 
+../Driver/MyTimer.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(66): warning: no previous prototype for function 'TIM3_IRQHandler' [-Wmissing-prototypes]
+void TIM3_IRQHandler(void) { //programme d'interruption pour le timer3
+     ^
+../Driver/MyTimer.c(66): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM3_IRQHandler(void) { //programme d'interruption pour le timer3
+^
+static 
+../Driver/MyTimer.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    Timer_Callback(); // Appeler la fonction d<E9>finie par l'utilisateur
+                                              ^
+../Driver/MyTimer.c(81): warning: no previous prototype for function 'TIM4_IRQHandler' [-Wmissing-prototypes]
+void TIM4_IRQHandler(void) { //programme d'interruption pour le timer4
+     ^
+../Driver/MyTimer.c(81): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM4_IRQHandler(void) { //programme d'interruption pour le timer4
+^
+static 
+../Driver/MyTimer.c(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= (0x6 << 4);  // R<E9>gler le mode PWM 1 (0x6)
+                                                         ^
+../Driver/MyTimer.c(186): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= TIM_CCMR1_OC1PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(191): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= (0x6 << 12);  // R<E9>gler le mode PWM 1 (0x6)
+                                                          ^
+../Driver/MyTimer.c(192): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR1 |= TIM_CCMR1_OC2PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(198): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= (0x6 << 4);  // R<E9>gler le mode PWM 1 (0x6)
+                                                         ^
+../Driver/MyTimer.c(199): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= TIM_CCMR2_OC3PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(204): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= (0x6 << 12);  // R<E9>gler le mode PWM 1 (0x6)
+                                                          ^
+../Driver/MyTimer.c(205): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Timer->CCMR2 |= TIM_CCMR2_OC4PE;          // Activer le pr<E9>chargement pour la comparaison
+                                                                                  ^
+../Driver/MyTimer.c(214): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR1=pulse;
+                           ~^~~~~
+../Driver/MyTimer.c(217): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR2=pulse;
+                           ~^~~~~
+../Driver/MyTimer.c(220): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR3=pulse;
+                           ~^~~~~
+../Driver/MyTimer.c(223): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                Timer->CCR4=pulse;
+                           ~^~~~~
+38 warnings generated.
+compiling MyTimer.c...
+../Driver/MyDS1307.c(1): warning: In file included from...
+../Driver/DS1307.h(3): warning: In file included from...
+../Driver/MyI2C.h(4): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/MyDS1307.c(1): warning: In file included from...
+../Driver/DS1307.h(3): warning: In file included from...
+../Driver/MyI2C.h(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit "normal" = SDA stable lors du pulse SCL (ie durant l'<E9>tat haut de SCL, SDA est stable)
+                                                           ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                           ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                                     ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                                          ^
+../Driver/MyI2C.h(37): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- uC en Mode Master uniquement (c'est notre choix) : c'est le uC qui est ma<EE>tre de l'horloge SCL.
+                                                                           ^
+../Driver/MyI2C.h(38): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Le Slave a une @ 7 bits. On ajoute un bit LSB qui est /WR (donc 0 pour <E9>criture, 1 pour lecture)
+                                                                         ^
+../Driver/MyI2C.h(39): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une adresse s'<E9>crit donc |a6 a5 a4 a3 a2 a1 a0 /WR| ce qui donne 8 bits. Elle indique une future
+                ^
+../Driver/MyI2C.h(40): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+lecture ou <E9>criture. 
+           ^
+../Driver/MyI2C.h(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+On parle d'@ 8 bits en regroupant |a6 a5 a4 a3 a2 a1 a0 /WR| (donc une @ <E9>criture, une @ lecture)
+                                                                         ^
+../Driver/MyI2C.h(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+NB : pr<E9>f<E9>rer le concept @7bits...c'est plus clair.
+       ^
+../Driver/MyI2C.h(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+NB : pr<E9>f<E9>rer le concept @7bits...c'est plus clair.
+            ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                  ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                                                 ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                                                        ^
+../Driver/MyI2C.h(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+par le Master que le sens <E0> venir pour les datas est indiqu<E9>.
+                          ^
+../Driver/MyI2C.h(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+par le Master que le sens <E0> venir pour les datas est indiqu<E9>.
+                                                              ^
+../Driver/MyI2C.h(47): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- En <E9>criture, 
+     ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                             ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                                                     ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                                                                                    ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                           ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                                                                                     ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                                                                                             ^
+../Driver/MyI2C.h(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        du prochain octet <E0> lire sur SDA par anticipation ,                     
+                                          ^
+../Driver/MyI2C.h(52): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * le master encha<EE>ne ses pulses (9), lors du pulse 9 (le dernier) c'est le master qui acquite.
+                                         ^
+../Driver/MyI2C.h(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s chaque acquitement, le Slave amorce le prochain octet en positionnant son bit 7 sur SDA 
+                             ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                             ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                                                                ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                                                                     ^
+../Driver/MyI2C.h(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        * Pour pouvoir g<E9>n<E9>rer le stop, le Master doit piloter SDA, or ce n'est pas possible puisque
+                                                        ^
+../Driver/MyI2C.h(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        * Pour pouvoir g<E9>n<E9>rer le stop, le Master doit piloter SDA, or ce n'est pas possible puisque
+                                                             ^
+../Driver/MyI2C.h(56): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        le Slave positionne le futur bit 7 ... Pour r<E9>gler ce probl<E8>me :
+                                                                                     ^
+../Driver/MyI2C.h(56): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        le Slave positionne le futur bit 7 ... Pour r<E9>gler ce probl<E8>me :
+                                                                                                      ^
+../Driver/MyI2C.h(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        propose plus le bit 7 du prochain octet sur SDA et lib<E8>re SDA. Le Master peut alors cl<F4>turer la 
+                                                                                              ^
+../Driver/MyI2C.h(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        propose plus le bit 7 du prochain octet sur SDA et lib<E8>re SDA. Le Master peut alors cl<F4>turer la 
+                                                                                                                                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                      ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                                                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                                                               ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                    ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                            ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                                                           ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                                                                 ^
+../Driver/MyI2C.h(68): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Ecriture de N octets , trame compl<E8>te (@ = adresse slave, pt = valeur de chargement du pointeur interne)
+                                    ^
+../Driver/MyI2C.h(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Lecture de N octets <E0> partir d'une adresse de pointeur donn<E9>e
+                      ^
+../Driver/MyI2C.h(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Lecture de N octets <E0> partir d'une adresse de pointeur donn<E9>e
+                                                                ^
+../Driver/MyI2C.h(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+|ReStart Cond   |@6|@5|@4|@3|@2|@1|@0| Wr =1 |Slave ACK|    (NB: restart n<E9>cessaire pour changer <E9>criture / lecture)
+                                                                          ^
+../Driver/MyI2C.h(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+|ReStart Cond   |@6|@5|@4|@3|@2|@1|@0| Wr =1 |Slave ACK|    (NB: restart n<E9>cessaire pour changer <E9>criture / lecture)
+                                                                                                    ^
+../Driver/MyI2C.h(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+1 fonction sp<E9>ciale : MyI2C_Get_Error
+             ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                     ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                                ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                                     ^
+../Driver/MyI2C.h(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+La fonction init prend parmi ses param<E8>tres le nom d'une fct callback d'erreur.
+                                      ^
+../Driver/MyI2C.h(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+En fait, le driver g<E8>re en IT les erreurs possibles I2C. La fonction MyI2C_Get_Error permet de 
+                    ^
+../Driver/MyI2C.h(104): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Il est conseill<E9> d'utiliser ce callback. Si on tombe dedans, c'est qu'une erreur s'est produite.
+               ^
+../Driver/MyI2C.h(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Si le code erreur est "inconnu", souvent c'est qu'il y  a un soucis <E0> l'adressage slave:
+                                                                    ^
+../Driver/MyI2C.h(106): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+V<E9>rifier alors la connectique physique SDA/SCL ainsi que l'alimentation du slave ou tout simplement
+ ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                       ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                                         ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                                                ^
+../Driver/MyI2C.h(125): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        UnknownError    // IT erreur d<E9>clench<E9>e mais pas de flag explicite ...
+                                      ^
+../Driver/MyI2C.h(125): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        UnknownError    // IT erreur d<E9>clench<E9>e mais pas de flag explicite ...
+                                                ^
+../Driver/MyI2C.h(134): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @retval Type d'erreur rencontr<E9>e , voir MyI2C_Err_Enum
+                                  ^
+../Driver/MyI2C.h(149): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param char IT_Prio_I2CErr 0 <E0> 15 (utilis<E9> en cas d'erreur, IT courte et non bloquante
+                                 ^
+../Driver/MyI2C.h(149): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param char IT_Prio_I2CErr 0 <E0> 15 (utilis<E9> en cas d'erreur, IT courte et non bloquante
+                                                ^
+../Driver/MyI2C.h(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        * @param  *ITErr_function : callback <E0> utiliser pour sortir d'un plantage transmission
+                                             ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                    ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                                  ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                                                     ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                         ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                                                 ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                                                               ^
+../Driver/MyI2C.h(171): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char Nb_Data;                                           // le nbre d'octets <E0> envoyer / recevoir  
+                                                                                    ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                      ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                                  ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                                              ^
+../Driver/MyI2C.h(186): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations <E0> transmettre 
+                                                                              ^
+../Driver/MyI2C.h(187): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+             voir d<E9>finition    MyI2C_RecSendData_Typedef                               
+                   ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                              ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                    ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                  ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                                      ^
+../Driver/MyI2C.h(205): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                                                                R<E9>ception I2C : GetString 
+                                                                                                                 ^
+../Driver/MyI2C.h(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage lecture <E0> l'interieur du slave I2C
+                                      ^
+../Driver/MyI2C.h(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage lecture <E0> l'interieur du slave I2C
+                                                          ^
+../Driver/MyI2C.h(218): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations n<E9>cessaires <E0> la
+                                                                               ^
+../Driver/MyI2C.h(218): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations n<E9>cessaires <E0> la
+                                                                                             ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                 ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                                     ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                                                  ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                           ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                 ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                               ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                                                   ^
+../Driver/MyDS1307.c(1): warning: In file included from...
+../Driver/DS1307.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finition des registres du DS1307
+    ^
+../Driver/MyDS1307.c(5): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Initialise l'I2C avec une priorit<E9> d'interruption faible (ex. : 2)
+                                        ^
+../Driver/MyDS1307.c(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Configure le registre de contr<F4>le pour activer l'horloge
+                                     ^
+../Driver/MyDS1307.c(9): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char control = 0x13; // signal carr<E9>, horloge activ<E9>e
+                                       ^
+../Driver/MyDS1307.c(9): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char control = 0x13; // signal carr<E9>, horloge activ<E9>e
+                                                          ^
+../Driver/MyDS1307.c(1): warning: In file included from...
+../Driver/DS1307.h(3): warning: In file included from...
+../Driver/MyI2C.h(170): warning: padding struct 'MyI2C_RecSendData_Typedef' with 3 bytes to align 'Ptr_Data' [-Wpadded]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+               ^
+../Driver/MyI2C.h(167): warning: padding size of 'MyI2C_RecSendData_Typedef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+../Driver/MyDS1307.c(9): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    char control = 0x13; // signal carr<E9>, horloge activ<E9>e
+         ^
+../Driver/MyDS1307.c(18): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    return ((decimal / 10) << 4) | (decimal % 10);
+    ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+../Driver/MyDS1307.c(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Convertit les valeurs d<E9>cimales en BCD
+                              ^
+../Driver/MyDS1307.c(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // <C9>crit les donn<E9>es dans les registres correspondants du DS1307
+       ^
+../Driver/MyDS1307.c(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // <C9>crit les donn<E9>es dans les registres correspondants du DS1307
+                        ^
+../Driver/MyDS1307.c(35): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    MyI2C_PutString(I2Cx, DS1307_REG_SECONDS, &timeData);  // Commence l'<E9>criture <E0> partir de DS1307_REG_SECONDS (0x00)
+                                                                         ^
+../Driver/MyDS1307.c(35): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    MyI2C_PutString(I2Cx, DS1307_REG_SECONDS, &timeData);  // Commence l'<E9>criture <E0> partir de DS1307_REG_SECONDS (0x00)
+                                                                                     ^
+../Driver/MyDS1307.c(34): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    MyI2C_RecSendData_Typedef timeData = {DS1307_ADDRESS, (char *)data, 7};
+                              ^
+../Driver/MyDS1307.c(41): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Lit les 7 registres du DS1307 (de DS1307_REG_SECONDS <E0> DS1307_REG_YEAR)
+                                                            ^
+../Driver/MyDS1307.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    MyI2C_GetString(I2Cx, DS1307_REG_SECONDS, &timeData);  // Commence la lecture <E0> partir de DS1307_REG_SECONDS (0x00)
+                                                                                  ^
+../Driver/MyDS1307.c(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Convertit les valeurs BCD en d<E9>cimal
+                                     ^
+115 warnings generated.
+compiling MyDS1307.c...
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(2): warning: In file included from...
+../Driver/MyI2C.h(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit "normal" = SDA stable lors du pulse SCL (ie durant l'<E9>tat haut de SCL, SDA est stable)
+                                                           ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                           ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                                     ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                                          ^
+../Driver/MyI2C.h(37): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- uC en Mode Master uniquement (c'est notre choix) : c'est le uC qui est ma<EE>tre de l'horloge SCL.
+                                                                           ^
+../Driver/MyI2C.h(38): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Le Slave a une @ 7 bits. On ajoute un bit LSB qui est /WR (donc 0 pour <E9>criture, 1 pour lecture)
+                                                                         ^
+../Driver/MyI2C.h(39): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une adresse s'<E9>crit donc |a6 a5 a4 a3 a2 a1 a0 /WR| ce qui donne 8 bits. Elle indique une future
+                ^
+../Driver/MyI2C.h(40): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+lecture ou <E9>criture. 
+           ^
+../Driver/MyI2C.h(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+On parle d'@ 8 bits en regroupant |a6 a5 a4 a3 a2 a1 a0 /WR| (donc une @ <E9>criture, une @ lecture)
+                                                                         ^
+../Driver/MyI2C.h(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+NB : pr<E9>f<E9>rer le concept @7bits...c'est plus clair.
+       ^
+../Driver/MyI2C.h(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+NB : pr<E9>f<E9>rer le concept @7bits...c'est plus clair.
+            ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                  ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                                                 ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                                                        ^
+../Driver/MyI2C.h(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+par le Master que le sens <E0> venir pour les datas est indiqu<E9>.
+                          ^
+../Driver/MyI2C.h(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+par le Master que le sens <E0> venir pour les datas est indiqu<E9>.
+                                                              ^
+../Driver/MyI2C.h(47): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- En <E9>criture, 
+     ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                             ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                                                     ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                                                                                    ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                           ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                                                                                     ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                                                                                             ^
+../Driver/MyI2C.h(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        du prochain octet <E0> lire sur SDA par anticipation ,                     
+                                          ^
+../Driver/MyI2C.h(52): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * le master encha<EE>ne ses pulses (9), lors du pulse 9 (le dernier) c'est le master qui acquite.
+                                         ^
+../Driver/MyI2C.h(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s chaque acquitement, le Slave amorce le prochain octet en positionnant son bit 7 sur SDA 
+                             ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                             ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                                                                ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                                                                     ^
+../Driver/MyI2C.h(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        * Pour pouvoir g<E9>n<E9>rer le stop, le Master doit piloter SDA, or ce n'est pas possible puisque
+                                                        ^
+../Driver/MyI2C.h(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        * Pour pouvoir g<E9>n<E9>rer le stop, le Master doit piloter SDA, or ce n'est pas possible puisque
+                                                             ^
+../Driver/MyI2C.h(56): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        le Slave positionne le futur bit 7 ... Pour r<E9>gler ce probl<E8>me :
+                                                                                     ^
+../Driver/MyI2C.h(56): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        le Slave positionne le futur bit 7 ... Pour r<E9>gler ce probl<E8>me :
+                                                                                                      ^
+../Driver/MyI2C.h(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        propose plus le bit 7 du prochain octet sur SDA et lib<E8>re SDA. Le Master peut alors cl<F4>turer la 
+                                                                                              ^
+../Driver/MyI2C.h(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        propose plus le bit 7 du prochain octet sur SDA et lib<E8>re SDA. Le Master peut alors cl<F4>turer la 
+                                                                                                                                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                      ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                                                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                                                               ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                    ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                            ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                                                           ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                                                                 ^
+../Driver/MyI2C.h(68): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Ecriture de N octets , trame compl<E8>te (@ = adresse slave, pt = valeur de chargement du pointeur interne)
+                                    ^
+../Driver/MyI2C.h(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Lecture de N octets <E0> partir d'une adresse de pointeur donn<E9>e
+                      ^
+../Driver/MyI2C.h(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Lecture de N octets <E0> partir d'une adresse de pointeur donn<E9>e
+                                                                ^
+../Driver/MyI2C.h(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+|ReStart Cond   |@6|@5|@4|@3|@2|@1|@0| Wr =1 |Slave ACK|    (NB: restart n<E9>cessaire pour changer <E9>criture / lecture)
+                                                                          ^
+../Driver/MyI2C.h(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+|ReStart Cond   |@6|@5|@4|@3|@2|@1|@0| Wr =1 |Slave ACK|    (NB: restart n<E9>cessaire pour changer <E9>criture / lecture)
+                                                                                                    ^
+../Driver/MyI2C.h(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+1 fonction sp<E9>ciale : MyI2C_Get_Error
+             ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                     ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                                ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                                     ^
+../Driver/MyI2C.h(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+La fonction init prend parmi ses param<E8>tres le nom d'une fct callback d'erreur.
+                                      ^
+../Driver/MyI2C.h(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+En fait, le driver g<E8>re en IT les erreurs possibles I2C. La fonction MyI2C_Get_Error permet de 
+                    ^
+../Driver/MyI2C.h(104): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Il est conseill<E9> d'utiliser ce callback. Si on tombe dedans, c'est qu'une erreur s'est produite.
+               ^
+../Driver/MyI2C.h(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Si le code erreur est "inconnu", souvent c'est qu'il y  a un soucis <E0> l'adressage slave:
+                                                                    ^
+../Driver/MyI2C.h(106): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+V<E9>rifier alors la connectique physique SDA/SCL ainsi que l'alimentation du slave ou tout simplement
+ ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                       ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                                         ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                                                ^
+../Driver/MyI2C.h(125): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        UnknownError    // IT erreur d<E9>clench<E9>e mais pas de flag explicite ...
+                                      ^
+../Driver/MyI2C.h(125): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        UnknownError    // IT erreur d<E9>clench<E9>e mais pas de flag explicite ...
+                                                ^
+../Driver/MyI2C.h(134): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @retval Type d'erreur rencontr<E9>e , voir MyI2C_Err_Enum
+                                  ^
+../Driver/MyI2C.h(149): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param char IT_Prio_I2CErr 0 <E0> 15 (utilis<E9> en cas d'erreur, IT courte et non bloquante
+                                 ^
+../Driver/MyI2C.h(149): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param char IT_Prio_I2CErr 0 <E0> 15 (utilis<E9> en cas d'erreur, IT courte et non bloquante
+                                                ^
+../Driver/MyI2C.h(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        * @param  *ITErr_function : callback <E0> utiliser pour sortir d'un plantage transmission
+                                             ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                    ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                                  ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                                                     ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                         ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                                                 ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                                                               ^
+../Driver/MyI2C.h(171): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char Nb_Data;                                           // le nbre d'octets <E0> envoyer / recevoir  
+                                                                                    ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                      ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                                  ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                                              ^
+../Driver/MyI2C.h(186): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations <E0> transmettre 
+                                                                              ^
+../Driver/MyI2C.h(187): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+             voir d<E9>finition    MyI2C_RecSendData_Typedef                               
+                   ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                              ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                    ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                  ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                                      ^
+../Driver/MyI2C.h(205): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                                                                R<E9>ception I2C : GetString 
+                                                                                                                 ^
+../Driver/MyI2C.h(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage lecture <E0> l'interieur du slave I2C
+                                      ^
+../Driver/MyI2C.h(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage lecture <E0> l'interieur du slave I2C
+                                                          ^
+../Driver/MyI2C.h(218): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations n<E9>cessaires <E0> la
+                                                                               ^
+../Driver/MyI2C.h(218): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations n<E9>cessaires <E0> la
+                                                                                             ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                 ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                                     ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                                                  ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                           ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                 ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                               ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                                                   ^
 Application/principal.c(1): warning: In file included from...
 ../Driver\myApplication.h(3): warning: In file included from...
-../Driver\DS1307.h(29): warning: unused function 'BCD_to_Decimal' [-Wunused-function]
-   29 | static uint8_t BCD_to_Decimal(uint8_t bcd);
-      |                ^~~~~~~~~~~~~~
-1 warning generated.
-compiling principal.c...
-../Driver/myApplication.c(18): warning: unused parameter 'timeDate' [-Wunused-parameter]
-   18 | void RTC_init(DS1307_TimeDate *timeDate){
-      |                                ^
-../Driver/myApplication.c(87): warning: variable 'x' set but not used [-Wunused-but-set-variable]
-   87 |           int16_t x;
-      |                   ^
-../Driver/myApplication.c(1): warning: In file included from...
+../Driver/DS1307.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finition des registres du DS1307
+    ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(4): warning: In file included from...
+../Driver/MyUSART.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle);
+                                                                                                                  ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(5): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(6): warning: In file included from...
+../Driver/MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver/MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver/MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(7): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(8): warning: In file included from...
+../Driver/MyPLATEAU.h(3): warning: In file included from...
+../Driver/MyUSART.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle);
+                                                                                                                  ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(8): warning: In file included from...
+../Driver/MyPLATEAU.h(9): warning: no newline at end of file [-Wnewline-eof]
+void updateBoatDirectionAndSpeed(uint8_t receivedData);
+                                                       ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(9): warning: In file included from...
+../Driver/MyEncoder.h(6): warning: no newline at end of file [-Wnewline-eof]
+void Encoder_Timer_Init(void);
+                              ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(13): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Battery_init();
+                 ^
+                  void
+../Driver\myApplication.h(15): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Roulis_init();
+                ^
+                 void
+../Driver\myApplication.h(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+float Demande_message();
+                     ^
+                      void
+../Driver\myApplication.h(21): warning: no newline at end of file [-Wnewline-eof]
+void Send_Data(DS1307_TimeDate *MARC, float angle_roulis);
+                                                          ^
+Application/principal.c(4): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                // Initialisation de l'horloge du syst<E8>me (RCC) et des GPIO n<E9>cessaires
+                                                      ^
+Application/principal.c(4): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                // Initialisation de l'horloge du syst<E8>me (RCC) et des GPIO n<E9>cessaires
+                                                                                ^
+Application/principal.c(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          // D<E9>clarer une broche avec Z pour reset
+              ^
+Application/principal.c(1): warning: In file included from...
+../Driver\myApplication.h(5): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+Application/principal.c(31): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                                        angle_roulis = fabs(angle_roulis-180);
+                                                     ~ ^~~~~~~~~~~~~~~~~~~~~~
+Application/principal.c(31): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                                        angle_roulis = fabs(angle_roulis-180);
+                                                       ~~~~ ~~~~~~~~~~~~^~~~
+Application/principal.c(9): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+          DS1307_TimeDate MARC;
+                          ^
+Application/principal.c(1): warning: In file included from...
 ../Driver\myApplication.h(3): warning: In file included from...
-../Driver\DS1307.h(29): warning: unused function 'BCD_to_Decimal' [-Wunused-function]
-   29 | static uint8_t BCD_to_Decimal(uint8_t bcd);
-      |                ^~~~~~~~~~~~~~
-3 warnings generated.
+../Driver/DS1307.h(29): warning: unused function 'BCD_to_Decimal' [-Wunused-function]
+static uint8_t BCD_to_Decimal(uint8_t bcd);
+               ^
+132 warnings generated.
+compiling principal.c...
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(1): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(2): warning: In file included from...
+../Driver/MyI2C.h(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit "normal" = SDA stable lors du pulse SCL (ie durant l'<E9>tat haut de SCL, SDA est stable)
+                                                           ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                           ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                                     ^
+../Driver/MyI2C.h(33): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- bit Start/Stop/Restart = SDA non stable lorsque SCL vaut '1' (violation r<E8>gle pr<E9>c<E9>dente)
+                                                                                          ^
+../Driver/MyI2C.h(37): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- uC en Mode Master uniquement (c'est notre choix) : c'est le uC qui est ma<EE>tre de l'horloge SCL.
+                                                                           ^
+../Driver/MyI2C.h(38): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Le Slave a une @ 7 bits. On ajoute un bit LSB qui est /WR (donc 0 pour <E9>criture, 1 pour lecture)
+                                                                         ^
+../Driver/MyI2C.h(39): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une adresse s'<E9>crit donc |a6 a5 a4 a3 a2 a1 a0 /WR| ce qui donne 8 bits. Elle indique une future
+                ^
+../Driver/MyI2C.h(40): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+lecture ou <E9>criture. 
+           ^
+../Driver/MyI2C.h(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+On parle d'@ 8 bits en regroupant |a6 a5 a4 a3 a2 a1 a0 /WR| (donc une @ <E9>criture, une @ lecture)
+                                                                         ^
+../Driver/MyI2C.h(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+NB : pr<E9>f<E9>rer le concept @7bits...c'est plus clair.
+       ^
+../Driver/MyI2C.h(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+NB : pr<E9>f<E9>rer le concept @7bits...c'est plus clair.
+            ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                  ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                                                 ^
+../Driver/MyI2C.h(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- On peut lire ou <E9>crire une ou plusieurs donn<E9>es <E0> la suite. C'est lors de l'envoie de l'adresse Slave
+                                                        ^
+../Driver/MyI2C.h(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+par le Master que le sens <E0> venir pour les datas est indiqu<E9>.
+                          ^
+../Driver/MyI2C.h(46): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+par le Master que le sens <E0> venir pour les datas est indiqu<E9>.
+                                                              ^
+../Driver/MyI2C.h(47): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- En <E9>criture, 
+     ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                             ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                                                     ^
+../Driver/MyI2C.h(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * les Ack sont faits par le slave apr<E8>s chaque octet envoy<E9> par le master (Ack = mise <E0> 0 le bit 9).
+                                                                                                                    ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                           ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                                                                                     ^
+../Driver/MyI2C.h(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * d<E8>s que le l@ slave est transmise (/RW = 1), et le Ack r<E9>alis<E9>, le slave positionne le bit 7 
+                                                                                             ^
+../Driver/MyI2C.h(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        du prochain octet <E0> lire sur SDA par anticipation ,                     
+                                          ^
+../Driver/MyI2C.h(52): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * le master encha<EE>ne ses pulses (9), lors du pulse 9 (le dernier) c'est le master qui acquite.
+                                         ^
+../Driver/MyI2C.h(53): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s chaque acquitement, le Slave amorce le prochain octet en positionnant son bit 7 sur SDA 
+                             ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                             ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                                                                ^
+../Driver/MyI2C.h(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        * Apr<E8>s le dernier octet, le Master g<E9>n<E8>re un stop.
+                                                                     ^
+../Driver/MyI2C.h(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        * Pour pouvoir g<E9>n<E9>rer le stop, le Master doit piloter SDA, or ce n'est pas possible puisque
+                                                        ^
+../Driver/MyI2C.h(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        * Pour pouvoir g<E9>n<E9>rer le stop, le Master doit piloter SDA, or ce n'est pas possible puisque
+                                                             ^
+../Driver/MyI2C.h(56): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        le Slave positionne le futur bit 7 ... Pour r<E9>gler ce probl<E8>me :
+                                                                                     ^
+../Driver/MyI2C.h(56): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        le Slave positionne le futur bit 7 ... Pour r<E9>gler ce probl<E8>me :
+                                                                                                      ^
+../Driver/MyI2C.h(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        propose plus le bit 7 du prochain octet sur SDA et lib<E8>re SDA. Le Master peut alors cl<F4>turer la 
+                                                                                              ^
+../Driver/MyI2C.h(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                        propose plus le bit 7 du prochain octet sur SDA et lib<E8>re SDA. Le Master peut alors cl<F4>turer la 
+                                                                                                                                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                      ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                                                 ^
+../Driver/MyI2C.h(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Une lecture ou <E9>criture se fait vers un Slave et <E0> partir d'une adresse m<E9>moire donn<E9>e (pointeur interne).
+                                                                                               ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                    ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                            ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                                                           ^
+../Driver/MyI2C.h(66): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Ce pointeur est automatiquement incr<E9>ment<E9> dans le slave lors des acc<E8>s <E9>criture ou lecture.
+                                                                                 ^
+../Driver/MyI2C.h(68): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Ecriture de N octets , trame compl<E8>te (@ = adresse slave, pt = valeur de chargement du pointeur interne)
+                                    ^
+../Driver/MyI2C.h(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Lecture de N octets <E0> partir d'une adresse de pointeur donn<E9>e
+                      ^
+../Driver/MyI2C.h(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+- Lecture de N octets <E0> partir d'une adresse de pointeur donn<E9>e
+                                                                ^
+../Driver/MyI2C.h(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+|ReStart Cond   |@6|@5|@4|@3|@2|@1|@0| Wr =1 |Slave ACK|    (NB: restart n<E9>cessaire pour changer <E9>criture / lecture)
+                                                                          ^
+../Driver/MyI2C.h(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+|ReStart Cond   |@6|@5|@4|@3|@2|@1|@0| Wr =1 |Slave ACK|    (NB: restart n<E9>cessaire pour changer <E9>criture / lecture)
+                                                                                                    ^
+../Driver/MyI2C.h(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+1 fonction sp<E9>ciale : MyI2C_Get_Error
+             ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                     ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                                ^
+../Driver/MyI2C.h(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Les fonctions Put/Get string fonctionnent sur le principe classique d<E9>crit pr<E9>c<E9>demment
+                                                                                     ^
+../Driver/MyI2C.h(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+La fonction init prend parmi ses param<E8>tres le nom d'une fct callback d'erreur.
+                                      ^
+../Driver/MyI2C.h(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+En fait, le driver g<E8>re en IT les erreurs possibles I2C. La fonction MyI2C_Get_Error permet de 
+                    ^
+../Driver/MyI2C.h(104): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Il est conseill<E9> d'utiliser ce callback. Si on tombe dedans, c'est qu'une erreur s'est produite.
+               ^
+../Driver/MyI2C.h(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Si le code erreur est "inconnu", souvent c'est qu'il y  a un soucis <E0> l'adressage slave:
+                                                                    ^
+../Driver/MyI2C.h(106): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+V<E9>rifier alors la connectique physique SDA/SCL ainsi que l'alimentation du slave ou tout simplement
+ ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                       ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                                         ^
+../Driver/MyI2C.h(124): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        TimeOut,                        // SCL est rest<E9> plus de 25ms <E0> l'<E9>tat bas
+                                                                                ^
+../Driver/MyI2C.h(125): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        UnknownError    // IT erreur d<E9>clench<E9>e mais pas de flag explicite ...
+                                      ^
+../Driver/MyI2C.h(125): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        UnknownError    // IT erreur d<E9>clench<E9>e mais pas de flag explicite ...
+                                                ^
+../Driver/MyI2C.h(134): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @retval Type d'erreur rencontr<E9>e , voir MyI2C_Err_Enum
+                                  ^
+../Driver/MyI2C.h(149): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param char IT_Prio_I2CErr 0 <E0> 15 (utilis<E9> en cas d'erreur, IT courte et non bloquante
+                                 ^
+../Driver/MyI2C.h(149): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param char IT_Prio_I2CErr 0 <E0> 15 (utilis<E9> en cas d'erreur, IT courte et non bloquante
+                                                ^
+../Driver/MyI2C.h(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        * @param  *ITErr_function : callback <E0> utiliser pour sortir d'un plantage transmission
+                                             ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                    ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                                  ^
+../Driver/MyI2C.h(166): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// Structure de donn<E9>es pour l'<E9>mission ou la r<E9>ception I2C :
+                                                     ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                         ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                                                 ^
+../Driver/MyI2C.h(170): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char * Ptr_Data;                                // l'adresse du d<E9>but de tableau char <E0> recevoir/<E9>mettre (tableau en RAM uC) 
+                                                                                                               ^
+../Driver/MyI2C.h(171): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        char Nb_Data;                                           // le nbre d'octets <E0> envoyer / recevoir  
+                                                                                    ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                      ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                                  ^
+../Driver/MyI2C.h(185): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage <E9>criture <E0> l'interieur du slave I2C
+                                                              ^
+../Driver/MyI2C.h(186): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations <E0> transmettre 
+                                                                              ^
+../Driver/MyI2C.h(187): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+             voir d<E9>finition    MyI2C_RecSendData_Typedef                               
+                   ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                              ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                    ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                  ^
+../Driver/MyI2C.h(190): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                                      Ecrit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                                      ^
+../Driver/MyI2C.h(205): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                                                                R<E9>ception I2C : GetString 
+                                                                                                                 ^
+../Driver/MyI2C.h(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage lecture <E0> l'interieur du slave I2C
+                                      ^
+../Driver/MyI2C.h(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  PteurAdress = adresse de d<E9>marrage lecture <E0> l'interieur du slave I2C
+                                                          ^
+../Driver/MyI2C.h(218): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations n<E9>cessaires <E0> la
+                                                                               ^
+../Driver/MyI2C.h(218): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  * @param  DataToSend, adresse de la structure qui contient les informations n<E9>cessaires <E0> la
+                                                                                             ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                 ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                                     ^
+../Driver/MyI2C.h(219): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                r<E9>ception des donn<E9>es voir d<E9>finition   MyI2C_RecSendData_Typedef                               
+                                                                                  ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                           ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                 ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                               ^
+../Driver/MyI2C.h(222): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                        Lit dans le slave c<E2>bl<E9> sur I2C1 <E0> partir de l'@ m<E9>moire interne Slave 0xAA
+                                                                                                                   ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(3): warning: In file included from...
+../Driver/DS1307.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finition des registres du DS1307
+    ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(4): warning: In file included from...
+../Driver/MyUSART.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle);
+                                                                                                                  ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(5): warning: In file included from...
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                               ^
+../Driver/MyGPIO.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    char GPIO_Pin;       // Num<E9>ro de la broche (de 0 <E0> 15)
+                                                         ^
+../Driver/MyGPIO.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>finitions des modes de configuration des GPIO
+    ^
+../Driver/MyGPIO.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Floating 0x04    // Entr<E9>e flottante
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                   ^
+../Driver/MyGPIO.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullDown 0x08    // Entr<E9>e avec r<E9>sistance pull-down
+                                               ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                   ^
+../Driver/MyGPIO.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_PullUp 0x09      // Entr<E9>e avec r<E9>sistance pull-up
+                                               ^
+../Driver/MyGPIO.h(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+#define In_Analog 0x00      // Entr<E9>e analogique
+                                   ^
+../Driver/MyGPIO.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// D<E9>clarations des fonctions du driver
+    ^
+../Driver/MyGPIO.h(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+int MyGPIO_Read(GPIO_TypeDef *GPIO, char GPIO_Pin); // Renvoie 0 ou une valeur diff<E9>rente de 0
+                                                                                   ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(6): warning: In file included from...
+../Driver/MyADC.h(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_single();
+                  ^
+                   void
+../Driver/MyADC.h(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int convert_cont();
+                ^
+                 void
+../Driver/MyADC.h(5): warning: no newline at end of file [-Wnewline-eof]
+int convert_cont();
+                   ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(7): warning: In file included from...
+../Driver/MyTimer.h(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    TIM_TypeDef *Timer;  // Pointeur vers TIM1 <E0> TIM4
+                                               ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                   ^
+../Driver/MyTimer.h(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+* @note   Fonction <E0> appeler syst<E9>matiquement avant d'aller dans des configurations plus 
+                                    ^
+../Driver/MyTimer.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+void MyTimer_ActivateIT1(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void)); //fonction d'appel <E0> l'interruption direct sur le programme principal 
+                                                                                                       ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(8): warning: In file included from...
+../Driver/MyPLATEAU.h(3): warning: In file included from...
+../Driver/MyUSART.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART1_SendData(int8_t timeh, int8_t timem, int8_t times,int8_t direction, int8_t battery, int8_t roll_angle);
+                                                                                                                  ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(8): warning: In file included from...
+../Driver/MyPLATEAU.h(9): warning: no newline at end of file [-Wnewline-eof]
+void updateBoatDirectionAndSpeed(uint8_t receivedData);
+                                                       ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(9): warning: In file included from...
+../Driver/MyEncoder.h(6): warning: no newline at end of file [-Wnewline-eof]
+void Encoder_Timer_Init(void);
+                              ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(13): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Battery_init();
+                 ^
+                  void
+../Driver/myApplication.h(15): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Roulis_init();
+                ^
+                 void
+../Driver/myApplication.h(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+float Demande_message();
+                     ^
+                      void
+../Driver/myApplication.h(21): warning: no newline at end of file [-Wnewline-eof]
+void Send_Data(DS1307_TimeDate *MARC, float angle_roulis);
+                                                          ^
+../Driver/myApplication.c(4): warning: no previous extern declaration for non-static variable 'batterylevel' [-Wmissing-variable-declarations]
+int8_t batterylevel = 0;
+       ^
+../Driver/myApplication.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int8_t batterylevel = 0;
+^
+../Driver/myApplication.c(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Battery_init(){
+                 ^
+                  void
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(5): warning: In file included from...
+../Driver/MyGPIO.h(6): warning: padding size of 'MyGPIO_Struct_TypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+../Driver/myApplication.c(7): warning: no previous prototype for function 'Battery_init' [-Wmissing-prototypes]
+void Battery_init(){
+     ^
+../Driver/myApplication.h(13): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void Battery_init();
+     ^
+                  void
+../Driver/myApplication.c(20): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+           // D<E9>finition des valeurs
+               ^
+../Driver/myApplication.c(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//    MARC.month = 12;         // D<E9>cembre 
+                                   ^
+../Driver/myApplication.c(18): warning: unused parameter 'timeDate' [-Wunused-parameter]
+void RTC_init(DS1307_TimeDate *timeDate){
+                               ^
+../Driver/myApplication.c(32): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Roulis_init(){
+                ^
+                 void
+../Driver/myApplication.c(32): warning: no previous prototype for function 'Roulis_init' [-Wmissing-prototypes]
+void Roulis_init(){
+     ^
+../Driver/myApplication.h(15): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void Roulis_init();
+     ^
+                 void
+../Driver/myApplication.c(60): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                //Lire le signal de r<E9>f<E9>rence de l'encodeur
+                                     ^
+../Driver/myApplication.c(60): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                //Lire le signal de r<E9>f<E9>rence de l'encodeur
+                                          ^
+../Driver/myApplication.c(83): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+float Demande_message(){
+                     ^
+                      void
+../Driver/myApplication.c(97): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                x = ((uint16_t)Message[1]<<8) + (uint16_t)Message[0];
+                  ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+../Driver/myApplication.c(98): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                y = ((uint16_t)Message[3]<<8) + (uint16_t)Message[2];//messge 2et 4 info utile
+                  ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+../Driver/myApplication.c(99): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                z = ((uint16_t)Message[5]<<8) + (uint16_t)Message[4];
+                  ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+../Driver/myApplication.c(101): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                return 360*atanf((float)z/(float)y)/(2*3.1415)+90;
+                ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../Driver/myApplication.c(101): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                return 360*atanf((float)z/(float)y)/(2*3.1415)+90;
+                       ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Driver/myApplication.c(87): warning: variable 'x' set but not used [-Wunused-but-set-variable]
+          int16_t x;
+                  ^
+../Driver/myApplication.c(83): warning: no previous prototype for function 'Demande_message' [-Wmissing-prototypes]
+float Demande_message(){
+      ^
+../Driver/myApplication.h(20): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+float Demande_message();
+      ^
+                      void
+../Driver/myApplication.c(124): warning: variable 'Teta' may be uninitialized when used here [-Wconditional-uninitialized]
+                MyTimer_SetDutyCycle(tim_SV->Timer, 3, (Teta/36)+5);
+                                                        ^~~~
+../Driver/myApplication.c(108): note: initialize the variable 'Teta' to silence this warning
+                int Teta; //angle des voiles
+                        ^
+                         = 0
+../Driver/myApplication.c(129): warning: implicit conversion changes signedness: 'uint8_t' (aka 'unsigned char') to 'int8_t' (aka 'signed char') [-Wsign-conversion]
+                int8_t timeh = MARC->hours;
+                       ~~~~~   ~~~~~~^~~~~
+../Driver/myApplication.c(130): warning: implicit conversion changes signedness: 'uint8_t' (aka 'unsigned char') to 'int8_t' (aka 'signed char') [-Wsign-conversion]
+                int8_t timem = MARC->minutes;
+                       ~~~~~   ~~~~~~^~~~~~~
+../Driver/myApplication.c(131): warning: implicit conversion changes signedness: 'uint8_t' (aka 'unsigned char') to 'int8_t' (aka 'signed char') [-Wsign-conversion]
+                int8_t times = MARC->seconds;
+                       ~~~~~   ~~~~~~^~~~~~~
+../Driver/myApplication.c(132): warning: implicit conversion turns floating-point number into integer: 'double' to 'int8_t' (aka 'signed char') [-Wfloat-conversion]
+                batterylevel = ((ADC1->DR - 353) * 100.0) / (474 - 353);
+                             ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../Driver/myApplication.c(140): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // Envoyer les donn<E9>es toutes les 100 ms
+                       ^
+../Driver/myApplication.c(141): warning: implicit conversion turns floating-point number into integer: 'float' to 'int8_t' (aka 'signed char') [-Wfloat-conversion]
+    UART1_SendData(timeh, timem, times, direction, batterylevel, angle_roulis);
+    ~~~~~~~~~~~~~~                                               ^~~~~~~~~~~~
+../Driver/myApplication.c(141): warning: implicit conversion loses integer precision: 'int' to 'int8_t' (aka 'signed char') [-Wimplicit-int-conversion]
+    UART1_SendData(timeh, timem, times, direction, batterylevel, angle_roulis);
+    ~~~~~~~~~~~~~~                      ^~~~~~~~~
+../Driver/myApplication.c(129): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                int8_t timeh = MARC->hours;
+                       ^
+../Driver/myApplication.c(1): warning: In file included from...
+../Driver/myApplication.h(3): warning: In file included from...
+../Driver/DS1307.h(29): warning: unused function 'BCD_to_Decimal' [-Wunused-function]
+static uint8_t BCD_to_Decimal(uint8_t bcd);
+               ^
+153 warnings generated.
 compiling myApplication.c...
 assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103RB/system_stm32f10x.c(65): warning: In file included from...
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+4 warnings generated.
 compiling system_stm32f10x.c...
 linking...
-Program Size: Code=18260 RO-data=892 RW-data=24 ZI-data=1648  
-".\Objects\Projet3FISA.axf" - 0 Error(s), 4 Warning(s).
+Program Size: Code=18208 RO-data=880 RW-data=24 ZI-data=1648  
+".\Objects\Projet3FISA.axf" - 0 Error(s), 709 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
-                ARM::CMSIS@6.1.0
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 6.1.0
+   * Component: CORE Version: 5.6.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
-                Keil::STM32F1xx_DFP@2.4.1
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
                 STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
    * Component: Startup Version: 1.0.0
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/Device/STM32F103RB
   ./RTE/_Reel
-  C:/Users/logar/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
-  C:/Users/logar/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/tutro/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/tutro/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE@6.1.0
+   * Component: ARM::CMSIS:CORE:5.6.0
 
-   * Component: Keil::Device:Startup@1.0.0
-      Source file:   Device/Source/system_stm32f10x.c
-      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+   * Component: Keil::Device:Startup:1.0.0
       Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
-Build Time Elapsed:  00:00:01
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>
